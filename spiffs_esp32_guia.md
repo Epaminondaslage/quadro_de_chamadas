@@ -61,72 +61,82 @@ Mas você pode facilmente enviar arquivos da pasta `data/` para o ESP32 usando o
 
 ## ✅ Etapas
 
-### 1. Baixe o `mkspiffs`
 
-🔗 [https://github.com/earlephilhower/mkspiffs/releases](https://github.com/earlephilhower/mkspiffs/releases)
+# 🛠️ Como Instalar `gcc`, `g++`, `make` no MSYS2 com Pacman (Windows)
 
-- Baixe a versão correta para seu sistema:
-  - Windows: `mkspiffs-<versão>-windows.zip`
-  - Linux/macOS: versão `.tar.gz`
-- Extraia o executável e coloque em uma pasta fácil (ex: `C:\mkspiffs\`)
+Este guia ensina a instalar as ferramentas de compilação como `gcc`, `g++` e `make` usando o **MSYS2**, a forma mais moderna e confiável de trabalhar com ferramentas GNU no Windows.
 
 ---
 
-### 2. Estrutura do projeto
+## ✅ Passo 1: Baixar e instalar o MSYS2
 
-```
-quadro_de_chamadas/
-├── quadro_de_chamadas.ino
-└── data/
-    ├── index.html
-    ├── style.css
-    ├── script.js
-    └── logo.png
-```
+1. Acesse: [https://www.msys2.org](https://www.msys2.org)
+2. Baixe o instalador para Windows
+3. Instale normalmente em `C:\msys64`
 
 ---
 
-### 3. Gere a imagem SPIFFS
+## ✅ Passo 2: Abrir o terminal correto
 
-Abra o terminal ou PowerShell e digite:
+> Muito importante!
+
+Após a instalação, vá em **Iniciar** e abra:
+
+```
+MSYS2 MinGW 64-bit
+```
+
+🟢 Este é o terminal correto para instalar os pacotes para compilar programas Windows 64 bits.
+
+---
+
+## ✅ Passo 3: Atualizar o sistema (obrigatório)
+
+No terminal `MSYS2 MinGW 64-bit`, digite:
 
 ```bash
-cd C:\Users\SeuUsuario\Documents\GitHub\quadro_de_chamadas
-C:\mkspiffs\mkspiffs.exe -c data -b 4096 -p 256 -s 0x150000 spiffs.bin
+pacman -Syu
 ```
+
+> Se o terminal pedir para reiniciar, **feche e reabra o MSYS2 MinGW 64-bit**  
+> e execute o comando novamente até não mostrar mais pacotes pendentes.
 
 ---
 
-### 4. Envie a imagem para o ESP32
+## ✅ Passo 4: Instalar o compilador completo
 
-Use o `esptool.py` (instale com `pip install esptool`):
+No terminal, digite:
 
 ```bash
-esptool.py --chip esp32 --port COM3 --baud 460800 write_flash 0x290000 spiffs.bin
+pacman -S mingw-w64-x86_64-toolchain
 ```
 
-- Substitua `COM3` pela porta serial correta
-- Substitua `0x290000` pelo endereço real da partição SPIFFS, se necessário
+> Isso instalará:
+- `gcc` (compilador C)
+- `g++` (compilador C++)
+- `make` (automação de build)
+- `gdb` (debugger)
+- e outras ferramentas úteis
 
 ---
 
-### Endereços comuns
+## ✅ Passo 5: Testar a instalação
 
-| Partição                          | Endereço SPIFFS |
-|----------------------------------|-----------------|
-| Default 4MB with spiffs (1.2MB)  | 0x290000        |
-| No OTA (2MB APP/2MB SPIFFS)      | 0x290000        |
+Execute no terminal:
+
+```bash
+gcc --version
+g++ --version
+make --version
+```
+
+Se tudo estiver instalado corretamente, você verá as versões dos programas.
 
 ---
 
-## ✅ Pronto! Seus arquivos foram enviados para o ESP32 🎉
-Agora você pode servi-los com:
+## ✅ Pronto!
 
-```cpp
-SPIFFS.begin(true);
-server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
-```
-
+Agora você tem um ambiente completo de compilação C/C++ no Windows com MSYS2 e pode compilar Makefiles, rodar projetos com ESP-IDF, PlatformIO, ou até mesmo trabalhar com projetos Linux-like no seu Windows.
 
 ## ✅ Conclusão
 
