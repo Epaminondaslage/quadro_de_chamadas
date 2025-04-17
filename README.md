@@ -1,6 +1,6 @@
-# quadro_de_chamadas
 
-# Projeto: Quadro De Chamadas
+
+# Projeto: Quadro Sinalizador de Chamadas
 
 ## Descrição
 Este projeto implementa um painel de chamadas interativo com ESP32, utilizando:
