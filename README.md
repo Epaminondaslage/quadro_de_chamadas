@@ -1,5 +1,3 @@
-
-
 # Projeto: Quadro Sinalizador de Chamadas
 ## O que é um sistema de chamada de enfermagem?
 
@@ -83,6 +81,16 @@ GET /status.json
   "entrada4": false
 }
 ```
+## O que é SPIFFS.h?
+
+SPIFFS.h é a biblioteca usada no ESP32 (e também ESP8266) para trabalhar com arquivos salvos na memória flash da placa, como se fosse um mini "pendrive" embutido.
+🧠 O que significa SPIFFS?
+
+### SPIFFS = SPI Flash File System
+
+É um sistema de arquivos leve desenvolvido especialmente para microcontroladores que usam memória flash.
+
+**Veja maiores detalhes em spiffs_esp32_guia.md** 
 
 ---
 Desenvolvido para ESP32 com foco em aplicações didáticas e de automação leve.
