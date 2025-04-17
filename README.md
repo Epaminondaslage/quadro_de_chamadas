@@ -8,6 +8,26 @@ Um **sistema de chamada de enfermagem**, também conhecido como **campainhas hos
 Esse sinal é enviado para uma **central de monitoramento**, também chamada de **central de posto de enfermagem**. Como o próprio nome já sugere, a central fica localizada no posto de enfermagem em **local visível a todos os profissionais**.
 
 O sistema de chamada de enfermagem também permite que os profissionais de saúde **registrem a sua presença no leito do paciente** que gerou a chamada, sinalizando ao restante da equipe que o **atendimento está sendo realizado**.
+
+## Como funciona um sistema de chamada de enfermagem?
+
+Um **sistema de chamada de enfermagem** pode ser composto por diferentes tipos de dispositivos, dependendo das necessidades e das características do ambiente de saúde.
+
+Com uma aplicação já tradicional em clínicas, hospitais e centros de saúde nas últimas décadas, em geral, os principais componentes são:
+
+### Estação de Chamada de Enfermagem
+Conhecidos como **acionadores** ou **campainhas**, são dispositivos fixados na parede ou em painéis de gases medicinais, e ficam diretamente ao alcance dos pacientes por meio de um **cordão com pera de acionamento altamente sensível ao toque**.
+
+Eles permitem que os pacientes acionem o sistema de chamada, ativando os **sinalizadores de porta** e da **central do posto de enfermagem**, sendo acessíveis mesmo quando há **dificuldades de locomoção e força**.
+
+### Sinaleiro de Porta
+Estes dispositivos, fixados **acima da porta do quarto/apartamento**, possuem **sinalização luminosa** com a função de indicar visualmente a existência de uma chamada. Eles podem ter **cores diferentes**, variando entre as tonalidades de **vermelho, azul, verde ou branco**.
+
+### Central de Posto de Enfermagem
+A **central de posto de enfermagem** é o dispositivo localizado na recepção ou no próprio posto de enfermagem. Ele é responsável por **sinalizar todas as chamadas em andamento** e o **status do atendimento**.
+
+Este painel pode ser **totalmente personalizável** e permite que **todos os pacientes da unidade sejam monitorados por até um único profissional**.
+
 ## Descrição
 Este projeto implementa um painel de chamadas interativo com ESP32, utilizando:
 
