@@ -1,0 +1,18 @@
+
+body { font-family: sans-serif; background: white; padding: 20px; }
+h1 { color: #333; }
+.status p, .entradas div { margin: 8px 0; }
+.bolinha {
+  display: inline-block; width: 16px; height: 16px;
+  border-radius: 50%; margin-right: 8px;
+}
+.red { background: red; }
+.green { background: green; }
+button {
+  padding: 10px 15px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
