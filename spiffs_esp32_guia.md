@@ -52,83 +52,81 @@ meu_projeto/
 
 ---
 
-## 🧩 Instalando o plugin **ESP32 Sketch Data Upload**
+# Como Enviar Arquivos SPIFFS para o ESP32 Usando Arduino IDE 2.x
 
-### 1. Pré-requisitos:
-
-- IDE do Arduino já instalada
-- Suporte ao ESP32 já configurado via Gerenciador de Placas
+A IDE do Arduino 2.x **não suporta o plugin antigo "ESP32 Sketch Data Upload"** da versão 1.8.x.  
+Mas você pode facilmente enviar arquivos da pasta `data/` para o ESP32 usando o utilitário `mkspiffs` + `esptool.py`.
 
 ---
 
-### 2. Baixar o plugin:
+## ✅ Etapas
 
-🔗 [Baixar do GitHub](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases)
+### 1. Baixe o `mkspiffs`
 
-> Baixe o arquivo `.zip` mais recente (ex: `ESP32FS-1.0.zip`)
+🔗 [https://github.com/earlephilhower/mkspiffs/releases](https://github.com/earlephilhower/mkspiffs/releases)
+
+- Baixe a versão correta para seu sistema:
+  - Windows: `mkspiffs-<versão>-windows.zip`
+  - Linux/macOS: versão `.tar.gz`
+- Extraia o executável e coloque em uma pasta fácil (ex: `C:\mkspiffs\`)
 
 ---
 
-### 3. Instalar o plugin:
+### 2. Estrutura do projeto
 
-- **Feche a IDE**
-- Extraia o ZIP
-- Copie a pasta `ESP32FS` para:
-
-#### No Windows:
 ```
-C:\Usuários\SeuNome\Arduino\tools\ESP32FS\tool\esp32fs.jar
-```
-
-#### No Linux:
-```
-~/Arduino/tools/ESP32FS/tool/esp32fs.jar
-```
-
-#### No macOS:
-```
-~/Documents/Arduino/tools/ESP32FS/tool/esp32fs.jar
+quadro_de_chamadas/
+├── quadro_de_chamadas.ino
+└── data/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── logo.png
 ```
 
 ---
 
-### 4. Verificar a instalação:
+### 3. Gere a imagem SPIFFS
 
-- Abra a IDE do Arduino
-- Vá em **Ferramentas**
-- Verifique se aparece a opção:
+Abra o terminal ou PowerShell e digite:
 
-```
-Ferramentas > ESP32 Sketch Data Upload
+```bash
+cd C:\Users\SeuUsuario\Documents\GitHub\quadro_de_chamadas
+C:\mkspiffs\mkspiffs.exe -c data -b 4096 -p 256 -s 0x150000 spiffs.bin
 ```
 
 ---
 
-## 🚀 Como usar o SPIFFS
+### 4. Envie a imagem para o ESP32
 
-1. Crie a pasta `data/` no mesmo local do seu `.ino`
-2. Coloque arquivos como `index.html`, `style.css`, etc. dentro dela
-3. Vá em **Ferramentas > ESP32 Sketch Data Upload** para enviar ao ESP32
-4. No seu código, use `SPIFFS` para carregar e servir os arquivos
+Use o `esptool.py` (instale com `pip install esptool`):
+
+```bash
+esptool.py --chip esp32 --port COM3 --baud 460800 write_flash 0x290000 spiffs.bin
+```
+
+- Substitua `COM3` pela porta serial correta
+- Substitua `0x290000` pelo endereço real da partição SPIFFS, se necessário
 
 ---
 
-## 🧪 Exemplo prático de uso
+### Endereços comuns
+
+| Partição                          | Endereço SPIFFS |
+|----------------------------------|-----------------|
+| Default 4MB with spiffs (1.2MB)  | 0x290000        |
+| No OTA (2MB APP/2MB SPIFFS)      | 0x290000        |
+
+---
+
+## ✅ Pronto! Seus arquivos foram enviados para o ESP32 🎉
+Agora você pode servi-los com:
 
 ```cpp
-#include "SPIFFS.h"
-#include <WebServer.h>
-
-WebServer server(80);
-
-void setup() {
-  SPIFFS.begin(true);
-  server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
-  server.begin();
-}
+SPIFFS.begin(true);
+server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 ```
 
----
 
 ## ✅ Conclusão
 
