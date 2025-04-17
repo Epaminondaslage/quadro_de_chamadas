@@ -1,5 +1,5 @@
 
-# Guia Completo: Usando `SPIFFS.h` no ESP32 com Arduino
+# Guia: Usando `SPIFFS.h` no ESP32 com Arduino
 
 ## 📦 O que é `SPIFFS.h`?
 
@@ -35,40 +35,34 @@ void setup() {
   server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 }
 ```
-# 📦 Guia Completo: Instalar Python, mkspiffs e Enviar SPIFFS para ESP32 com MSYS2
 
+# 📦 Instalar Python 3, mkspiffs e Enviar SPIFFS para ESP32 com MSYS2 (IDE Arduino 2.x)
 
-# 🐍 Como Instalar o Python e pip no Windows (Para uso com ESP32 e esptool.py)
-
-Este guia mostra como instalar o Python corretamente no Windows, com `pip` funcionando para que você possa usar ferramentas como `esptool.py`.
+Este guia ensina a instalar **Python 3**, `esptool.py`, `mkspiffs` e configurar o **MSYS2 MinGW 64-bit** para enviar arquivos SPIFFS para o ESP32 usando a Arduino IDE 2.x (que não tem mais suporte ao plugin clássico de SPIFFS).
 
 ---
 
-## ✅ Etapas de Instalação
+## ✅ Etapa 1: Instalar o Python 3 e pip (NÃO use Python 2!)
 
-### 1. Baixar o Python
+### 🔽 1. Baixe o Python 3.x
 
 Acesse o site oficial:
-
 🔗 https://www.python.org/downloads/
 
-Clique em **Download Python 3.x.x** (a versão recomendada aparecerá automaticamente).
+Baixe a versão recomendada para Windows (ex: Python 3.12.1).
+
+### ⚠️ IMPORTANTE:
+Na tela do instalador, marque:
+
+```
+☑ Add Python 3.x to PATH
+```
+
+Depois clique em **Install Now**.
 
 ---
 
-### 2. Executar o instalador
-
-Ao abrir o instalador, **ATENÇÃO a este passo importante:**
-
-✅ Marque a caixa **"Add Python 3.x to PATH"**
-
-Depois clique em:
-
-➡️ **Install Now**
-
----
-
-### 3. Verificar se o Python foi instalado corretamente
+### ✅ 2. Verificar instalação
 
 Abra o **Prompt de Comando (CMD)** e digite:
 
@@ -77,128 +71,95 @@ python --version
 ```
 
 Você deve ver algo como:
-
 ```
 Python 3.12.1
 ```
 
----
-
-### 4. Verificar se o `pip` está disponível
+Depois:
 
 ```bash
 pip --version
 ```
 
-Você deve ver algo como:
-
-```
-pip 23.2.1 from C:\Users\SeuUsuario\AppData\...\site-packages\pip (python 3.x)
-```
-
 ---
 
-## 🧰 Se `pip` não funcionar...
+### ✅ 3. Instalar o esptool.py
 
-Se aparecer o erro:
-
-```
-'pip' não é reconhecido como um comando interno...
-```
-
-Então o Python não foi adicionado ao PATH. Para corrigir:
-
-### ➤ Opção 1: Reinstale o Python e marque a opção "Add to PATH"
-
-### ➤ Opção 2: Adicione manualmente o PATH:
-
-Vá em:
-
-```
-Iniciar > Variáveis de ambiente > Editar PATH
-```
-
-Adicione os dois caminhos (ajuste para sua versão):
-
-```
-C:\Users\SeuUsuario\AppData\Local\Programs\Python\Python3x\
-C:\Users\SeuUsuario\AppData\Local\Programs\Python\Python3x\Scripts\
-```
-
----
-
-## ✅ Instalar o esptool
-
-Após o `pip` estar funcionando, execute:
+Ainda no CMD, execute:
 
 ```bash
 pip install esptool
 ```
 
-Teste com:
+Teste:
 
 ```bash
 esptool.py --help
 ```
 
-Se aparecer uma lista de comandos, está tudo certo!
+---
 
+## ✅ Etapa 2: Instalar o MSYS2
+
+### 🔽 1. Baixe o MSYS2
+
+🔗 https://www.msys2.org
+
+Instale em `C:\msys64` (pasta padrão recomendada)
+
+### 🔄 2. Abra o terminal correto:
+
+Vá no menu Iniciar e abra:
+
+```
+MSYS2 MinGW 64-bit
+```
+
+⚠️ **Não use o MSYS shell padrão**
 
 ---
 
+### ✅ 3. Atualize o sistema
 
-# 🧠 Guia Completo: Enviar Arquivos SPIFFS para o ESP32 usando MSYS2 (IDE Arduino 2.x)
-
-Este guia ensina como preparar e enviar arquivos da pasta `data/` (HTML, CSS, JS, imagens, etc.) para o ESP32 usando `mkspiffs` e `esptool.py` com o terminal **MSYS2 MinGW 64-bit** — método ideal para quem usa a Arduino IDE 2.x, que não tem mais o plugin de upload.
-
----
-
-## ✅ Pré-requisitos
-
-- Arduino IDE 2.x instalada
-- Projeto `.ino` salvo com pasta `data/`
-- MSYS2 instalado (https://www.msys2.org)
-- Python instalado com `esptool.py`
-- Ferramenta `mkspiffs` baixada
-
----
-
-## 📦 Instale o MSYS2 e o toolchain
-
-1. Baixe o MSYS2: https://www.msys2.org  
-2. Instale em `C:\msys64`
-3. Abra **MSYS2 MinGW 64-bit** no menu Iniciar
-4. Atualize e instale ferramentas:
 ```bash
 pacman -Syu
+```
+
+Se pedir para reiniciar o terminal, faça isso.
+
+---
+
+### ✅ 4. Instale ferramentas de compilação
+
+```bash
 pacman -S mingw-w64-x86_64-toolchain python-pip
 ```
 
----
-
-## 🔧 Instale o `esptool.py`
-
-No mesmo terminal MSYS2 MinGW 64-bit:
+Teste:
 
 ```bash
-pip install esptool
+make --version
+gcc --version
 ```
 
 ---
 
-## 🛠️ Baixe o mkspiffs
+## ✅ Etapa 3: Baixar o mkspiffs
 
-Baixe o `mkspiffs` compatível com Windows:
+Baixe `mkspiffs.exe` no repositório oficial:
 🔗 https://github.com/earlephilhower/mkspiffs/releases
 
-- Extraia o `mkspiffs.exe` para uma pasta acessível, ex:
+Extraia o arquivo para uma pasta como:
+
 ```
 C:\esp32tools\mkspiffs.exe
 ```
 
 ---
 
-## 📁 Estrutura do Projeto
+## ✅ Etapa 4: Preparar seu projeto
+
+Estrutura recomendada:
 
 ```
 meu_projeto/
@@ -211,25 +172,20 @@ meu_projeto/
 
 ---
 
-## 📦 Gerar imagem SPIFFS
+## ✅ Etapa 5: Gerar a imagem SPIFFS
 
-Navegue até a pasta do projeto:
+No terminal MSYS2 MinGW 64-bit:
 
 ```bash
 cd /c/Users/SeuUsuario/Documents/Arduino/meu_projeto
-```
-
-Crie a imagem SPIFFS com:
-
-```bash
 /c/esp32tools/mkspiffs.exe -c data -b 4096 -p 256 -s 0x150000 spiffs.bin
 ```
 
 ---
 
-## 🚀 Enviar a imagem para o ESP32
+## ✅ Etapa 6: Enviar a imagem para o ESP32
 
-Descubra a porta COM do seu ESP32 (ex: COM5)
+Descubra a porta COM do seu ESP32 (ex: COM5) e digite:
 
 ```bash
 esptool.py --chip esp32 --port COM5 --baud 460800 write_flash 0x290000 spiffs.bin
@@ -237,22 +193,19 @@ esptool.py --chip esp32 --port COM5 --baud 460800 write_flash 0x290000 spiffs.bi
 
 ---
 
-## 📍 Sobre o endereço SPIFFS
+## ℹ️ Endereço da partição SPIFFS
 
-O endereço `0x290000` pode variar de acordo com o esquema de partição:
+| Esquema de partição                 | Endereço típico |
+|------------------------------------|-----------------|
+| Default 4MB with spiffs (1.2MB app)| 0x290000        |
+| No OTA (2MB APP/2MB SPIFFS)        | 0x290000        |
 
-| Esquema de partição                  | Endereço típico |
-|-------------------------------------|-----------------|
-| Default 4MB with spiffs (1.2MB app) | 0x290000        |
-| No OTA (2MB/2MB)                    | 0x290000        |
-
-Verifique o layout em **Ferramentas > Partition Scheme** na IDE Arduino.
+Verifique em:  
+Arduino IDE > Ferramentas > Partition Scheme
 
 ---
 
-## ✅ Finalizando
-
-No seu código `.ino`, você precisa montar o SPIFFS e servir os arquivos assim:
+## ✅ Etapa 7: Servir os arquivos SPIFFS no seu código
 
 ```cpp
 #include "SPIFFS.h"
@@ -265,12 +218,13 @@ void setup() {
 
 ---
 
-## 🧪 Teste
+## 🧪 Etapa 8: Testar no navegador
 
-Abra o navegador no IP do seu ESP32 e veja se a página carregou.
+Acesse o IP do ESP32 para confirmar se a interface web está sendo servida corretamente.
 
 ---
 
-## 🏁 Pronto!
+## 🎉 Pronto!
 
-Você enviou seus arquivos da pasta `data/` para o ESP32 com sucesso, mesmo usando a Arduino IDE 2.x!
+Você agora tem um ambiente moderno e completo para enviar SPIFFS ao ESP32 usando Python 3, mkspiffs e MSYS2 — mesmo usando a Arduino IDE 2.x.
+
