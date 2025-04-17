@@ -1,7 +1,13 @@
 
 
 # Projeto: Quadro Sinalizador de Chamadas
+## O que é um sistema de chamada de enfermagem?
 
+Um **sistema de chamada de enfermagem**, também conhecido como **campainhas hospitalares**, é um conjunto de dispositivos eletrônicos que permitem que os pacientes, acamados ou não, acionem um **sinal sonoro e/ou luminoso** para chamar a atenção dos profissionais de saúde quando precisam de assistência.
+
+Esse sinal é enviado para uma **central de monitoramento**, também chamada de **central de posto de enfermagem**. Como o próprio nome já sugere, a central fica localizada no posto de enfermagem em **local visível a todos os profissionais**.
+
+O sistema de chamada de enfermagem também permite que os profissionais de saúde **registrem a sua presença no leito do paciente** que gerou a chamada, sinalizando ao restante da equipe que o **atendimento está sendo realizado**.
 ## Descrição
 Este projeto implementa um painel de chamadas interativo com ESP32, utilizando:
 
