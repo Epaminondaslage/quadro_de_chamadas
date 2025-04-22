@@ -1,5 +1,5 @@
 
-# Guia Completo: Usando `SPIFFS.h` no ESP32 com Arduino
+# Guia: Usando `SPIFFS.h` no ESP32 com Arduino
 
 ## 📦 O que é `SPIFFS.h`?
 
@@ -36,9 +36,130 @@ void setup() {
 }
 ```
 
+# 📦 Instalar Python 3, mkspiffs e Enviar SPIFFS para ESP32 com MSYS2 (IDE Arduino 2.x)
+
+Este guia ensina a instalar **Python 3**, `esptool.py`, `mkspiffs` e configurar o **MSYS2 MinGW 64-bit** para enviar arquivos SPIFFS para o ESP32 usando a Arduino IDE 2.x (que não tem mais suporte ao plugin clássico de SPIFFS).
+
 ---
 
-## 📁 Estrutura típica do projeto:
+## ✅ Etapa 1: Instalar o Python 3 e pip (NÃO use Python 2!)
+
+### 🔽 1. Baixe o Python 3.x
+
+Acesse o site oficial:
+🔗 https://www.python.org/downloads/
+
+Baixe a versão recomendada para Windows (ex: Python 3.12.1).
+
+### ⚠️ IMPORTANTE:
+Na tela do instalador, marque:
+
+```
+☑ Add Python 3.x to PATH
+```
+
+Depois clique em **Install Now**.
+
+---
+
+### ✅ 2. Verificar instalação
+
+Abra o **Prompt de Comando (CMD)** e digite:
+
+```bash
+python --version
+```
+
+Você deve ver algo como:
+```
+Python 3.12.1
+```
+
+Depois:
+
+```bash
+pip --version
+```
+
+---
+
+### ✅ 3. Instalar o esptool.py
+
+Ainda no CMD, execute:
+
+```bash
+pip install esptool
+```
+
+Teste:
+
+```bash
+esptool.py --help
+```
+
+---
+
+## ✅ Etapa 2: Instalar o MSYS2
+
+### 🔽 1. Baixe o MSYS2
+
+🔗 https://www.msys2.org
+
+Instale em `C:\msys64` (pasta padrão recomendada)
+
+### 🔄 2. Abra o terminal correto:
+
+Vá no menu Iniciar e abra:
+
+```
+MSYS2 MinGW 64-bit
+```
+
+⚠️ **Não use o MSYS shell padrão**
+
+---
+
+### ✅ 3. Atualize o sistema
+
+```bash
+pacman -Syu
+```
+
+Se pedir para reiniciar o terminal, faça isso.
+
+---
+
+### ✅ 4. Instale ferramentas de compilação
+
+```bash
+pacman -S mingw-w64-x86_64-toolchain python-pip
+```
+
+Teste:
+
+```bash
+make --version
+gcc --version
+```
+
+---
+
+## ✅ Etapa 3: Baixar o mkspiffs
+
+Baixe `mkspiffs.exe` no repositório oficial:
+🔗 https://github.com/earlephilhower/mkspiffs/releases
+
+Extraia o arquivo para uma pasta como:
+
+```
+C:\esp32tools\mkspiffs.exe
+```
+
+---
+
+## ✅ Etapa 4: Preparar seu projeto
+
+Estrutura recomendada:
 
 ```
 meu_projeto/
@@ -46,90 +167,64 @@ meu_projeto/
 └── data/
     ├── index.html
     ├── style.css
-    ├── script.js
-    └── logo.png
+    └── script.js
 ```
 
 ---
 
-## 🧩 Instalando o plugin **ESP32 Sketch Data Upload**
+## ✅ Etapa 5: Gerar a imagem SPIFFS
 
-### 1. Pré-requisitos:
+No terminal MSYS2 MinGW 64-bit:
 
-- IDE do Arduino já instalada
-- Suporte ao ESP32 já configurado via Gerenciador de Placas
-
----
-
-### 2. Baixar o plugin:
-
-🔗 [Baixar do GitHub](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases)
-
-> Baixe o arquivo `.zip` mais recente (ex: `ESP32FS-1.0.zip`)
-
----
-
-### 3. Instalar o plugin:
-
-- **Feche a IDE**
-- Extraia o ZIP
-- Copie a pasta `ESP32FS` para:
-
-#### No Windows:
-```
-C:\Usuários\SeuNome\Arduino\tools\ESP32FS\tool\esp32fs.jar
-```
-
-#### No Linux:
-```
-~/Arduino/tools/ESP32FS/tool/esp32fs.jar
-```
-
-#### No macOS:
-```
-~/Documents/Arduino/tools/ESP32FS/tool/esp32fs.jar
+```bash
+cd /c/Users/SeuUsuario/Documents/Arduino/meu_projeto
+/c/esp32tools/mkspiffs.exe -c data -b 4096 -p 256 -s 0x150000 spiffs.bin
 ```
 
 ---
 
-### 4. Verificar a instalação:
+## ✅ Etapa 6: Enviar a imagem para o ESP32
 
-- Abra a IDE do Arduino
-- Vá em **Ferramentas**
-- Verifique se aparece a opção:
+Descubra a porta COM do seu ESP32 (ex: COM5) e digite:
 
-```
-Ferramentas > ESP32 Sketch Data Upload
+```bash
+esptool.py --chip esp32 --port COM5 --baud 460800 write_flash 0x290000 spiffs.bin
 ```
 
 ---
 
-## 🚀 Como usar o SPIFFS
+## ℹ️ Endereço da partição SPIFFS
 
-1. Crie a pasta `data/` no mesmo local do seu `.ino`
-2. Coloque arquivos como `index.html`, `style.css`, etc. dentro dela
-3. Vá em **Ferramentas > ESP32 Sketch Data Upload** para enviar ao ESP32
-4. No seu código, use `SPIFFS` para carregar e servir os arquivos
+| Esquema de partição                 | Endereço típico |
+|------------------------------------|-----------------|
+| Default 4MB with spiffs (1.2MB app)| 0x290000        |
+| No OTA (2MB APP/2MB SPIFFS)        | 0x290000        |
+
+Verifique em:  
+Arduino IDE > Ferramentas > Partition Scheme
 
 ---
 
-## 🧪 Exemplo prático de uso
+## ✅ Etapa 7: Servir os arquivos SPIFFS no seu código
 
 ```cpp
 #include "SPIFFS.h"
-#include <WebServer.h>
-
-WebServer server(80);
 
 void setup() {
   SPIFFS.begin(true);
   server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
-  server.begin();
 }
 ```
 
 ---
 
-## ✅ Conclusão
+## 🧪 Etapa 8: Testar no navegador
 
-SPIFFS é uma ferramenta poderosa para projetos com ESP32. Com ele, você transforma seu microcontrolador em um servidor web com páginas personalizadas, facilitando a criação de interfaces amigáveis e flexíveis para seus projetos de automação, monitoramento e controle.
+Acesse o IP do ESP32 para confirmar se a interface web está sendo servida corretamente.
+
+---
+
+## 🎉 Pronto!
+
+Você agora tem um ambiente moderno e completo para enviar SPIFFS ao ESP32 usando Python 3, mkspiffs e MSYS2 — mesmo usando a Arduino IDE 2.x.
+
