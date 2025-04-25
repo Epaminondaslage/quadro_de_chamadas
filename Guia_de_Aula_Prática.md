@@ -2,7 +2,7 @@
 
 ## 🎓 Objetivo da Aula
 
-Orientar os alunos do **2º ano do Curso de Eletrotécnica** na montagem de um **Quadro de Chamadas de Enfermagem**, a ser instalado na parede externa do **Box 4** do Laboratório.
+Capacitar os alunos do **2º ano do Curso de Eletrotécnica** na montagem de um **Quadro de Chamadas de Enfermagem**, a ser instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
 
 ## 📚 Descrição da Atividade
 
