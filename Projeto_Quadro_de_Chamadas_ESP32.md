@@ -56,6 +56,10 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 
 ## 🌡 Sensor DHT11
 
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/dht11.png" alt="dht11" width="200">
+
+O DHT11 é um sensor digital de baixo custo usado para medir temperatura e umidade relativa do ar. Ele é amplamente utilizado em projetos educacionais, hobby e sistemas de automação residencial devido à sua simplicidade de uso e integração fácil com microcontroladores como Arduino, ESP32 e ESP8266.
+
 - Ligado ao GPIO 15
 - Mostra temperatura e umidade no display e na interface web
 - Se não estiver conectado: mostra `Ind`
@@ -63,6 +67,10 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 ---
 
 ## 🔔 Controle de Buzzer
+
+O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele é muito comum em projetos de automação, sistemas de alarme, interfaces de usuário e aplicações educacionais. Existem duas versões principais: o buzzer ativo e o buzzer passivo, cada um com características específicas.
+
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/buzzer.png" alt="dht11" width="200">
 
 - Ativado por qualquer uma das 4 entradas digitais
 - Desligado por:
@@ -75,10 +83,13 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 
 Abra no navegador:
 
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/dht11.png" alt="dht11" width="200">
+
 ```
 http://240.0.0.x
 ```
 Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
+
 
 ---
 
