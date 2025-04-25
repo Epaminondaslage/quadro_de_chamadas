@@ -1,4 +1,3 @@
-
 function atualizarStatus() {
   fetch('/status.json')
     .then(res => res.json())
@@ -22,12 +21,12 @@ function atualizarStatus() {
       const buzzerButton = document.getElementById('buzzerButton');
 
       if (data.buzzer) {
-        buzzerStatus.textContent = "Ligado";
-        buzzerButton.textContent = "Desativar Buzzer";
+        buzzerStatus.textContent = "Acionada";
+        buzzerButton.textContent = "Desativar Som";
         buzzerButton.style.backgroundColor = "#007BFF";
       } else {
-        buzzerStatus.textContent = "Desligado";
-        buzzerButton.textContent = "Buzzer Desativado";
+        buzzerStatus.textContent = "Desligada";
+        buzzerButton.textContent = "Desativar Som";
         buzzerButton.style.backgroundColor = "#6c757d";
       }
 
@@ -35,11 +34,11 @@ function atualizarStatus() {
       for (let i = 1; i <= 4; i++) {
         const bolinha = document.getElementById('e' + i);
         if (data['entrada' + i]) {
-          bolinha.classList.remove('red');
+          bolinha.classList.remove('gray');
           bolinha.classList.add('green');
         } else {
           bolinha.classList.remove('green');
-          bolinha.classList.add('red');
+          bolinha.classList.add('gray');
         }
       }
     })

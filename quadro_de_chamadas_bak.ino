@@ -105,46 +105,29 @@ String getJsonAsString(float temperatura, float umidade){
     json += "}";
     return json;
 }
-// Variáveis para controlar o bip do buzzer
-unsigned long ultimoBip = 0;
-bool buzzerEstado = false; // HIGH ou LOW no buzzer
 
 void loop() {
   server.handleClient();
-  bool algumaEntradaAtiva = false;
 
   for (int i = 0; i < 4; i++) {
     bool estado = digitalRead(entradas[i]);
-    digitalWrite(saidas[i], estado ? LOW : HIGH);
-    if (estado) {
-      algumaEntradaAtiva = true;
+    digitalWrite(saidas[i], estado ? HIGH : LOW);
+    if (estado && millis() > buzzerDesligadoAte) {
+      digitalWrite(buzzerPin, HIGH);
+      buzzerAtivo = true;
     }
   }
-  // Verifica botão de mute
-  if (digitalRead(botaoMute) == HIGH) {
-    buzzerDesligadoAte = millis() + 60000; // Mutar por 60 segundos
+  /*
+  if (digitalRead(botaoMute)) {
+    buzzerDesligadoAte = millis() + 60000;
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
-    buzzerEstado = false;
-  }
+  }*/
 
-  // Controle do buzzer
   if (millis() > buzzerDesligadoAte) {
-    if (algumaEntradaAtiva) {
-  tocarAlertaSonoro(); // ➔ Em vez de ligar direto o buzzer, toca o som
-  buzzerAtivo = true;
-  } else {
-    noTone(buzzerPin); // para o som
-    buzzerAtivo = false;
-  }
-  } else {
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
-    buzzerEstado = false;
   }
-
-
-
 }
 
 bool handleFileRead(String path) {
@@ -163,21 +146,4 @@ bool handleFileRead(String path) {
     return true;
   }
   return false;
-}
-
-void tocarAlertaSonoro() {
-  tone(buzzerPin, 1000); // Toca 1000 Hz
-  delay(150);
-  noTone(buzzerPin);
-  delay(100);
-
-  tone(buzzerPin, 1500); // Toca 1500 Hz
-  delay(150);
-  noTone(buzzerPin);
-  delay(100);
-
-  tone(buzzerPin, 1200); // Toca 1200 Hz
-  delay(150);
-  noTone(buzzerPin);
-  delay(300);
 }
