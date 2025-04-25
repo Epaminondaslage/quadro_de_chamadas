@@ -92,7 +92,7 @@ Após reiniciar o ESP32, o monitor deve exibir:
 
 ```
 WiFi conectado
-IP atribuído: 10.0.2.101
+IP atribuído: 240.0.0.x
 ✅ SPIFFS montado com sucesso
 Arquivos SPIFFS disponíveis:
   /index.html
@@ -108,23 +108,8 @@ Arquivos SPIFFS disponíveis:
 Abra no navegador:
 
 ```
-http://10.0.2.101
+http://240.0.0.x
 ```
-
-A interface carregará os dados em tempo real.
-
----
-
-## 🧩 Problemas comuns
-
-- **"Not found:"** → o SPIFFS não foi gravado corretamente
-- **SPIFFS vazio:** verifique se os arquivos estão na pasta `data/` antes de gerar
-- **Baudrate ou porta errada:** confirme `COM8` e ajuste se necessário
+Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
 
 ---
-
-## 🟢 Finalização
-
-- Todos os arquivos devem estar no SPIFFS
-- `index.html` deve ser o ponto de entrada
-- Use `server.serveStatic("/", SPIFFS, "/")` + `onNotFound` para servir todos os arquivos
