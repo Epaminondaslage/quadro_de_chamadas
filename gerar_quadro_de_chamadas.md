@@ -60,21 +60,6 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
   - Botão na interface web
 - Fica desativado por 60 segundos
 
-- ## 🔍 Monitor Serial
-
-Após reiniciar o ESP32, o monitor deve exibir:
-
-```
-WiFi conectado
-IP atribuído: 240.0.0.x
-✅ SPIFFS montado com sucesso
-Arquivos SPIFFS disponíveis:
-  /index.html
-  /style.css
-  /script.js
-  /logo.png
-```
----
 
 ## 🌐 Acesso à interface
 
@@ -116,6 +101,10 @@ quadro_de_chamadas/
 4. Faça upload do código para o ESP32.
 5. Acesse o IP do ESP32 no navegador 🔍.
 
+ ## Códigos de programação 
+
+ Todos os programas desenvolvidos estão disponibilidados para livre acesso e utilização como modelo para outras aplicações e estao neste repodiório na para Qaudro_de_chamada
+
 ---
 
 ## 📡 Exemplo de Resposta JSON
@@ -132,6 +121,23 @@ GET /status.json
   "entrada4": false
 }
 ```
+
+ ## 🔍 Monitor Serial
+
+Após iniciar o ESP32, o monitor serial , conectado a portrta usb do ESP32 e a interface do IDE do arduino pode monitorar e  deve exibir:
+
+```
+WiFi conectado
+IP atribuído: 240.0.0.x
+✅ SPIFFS montado com sucesso
+Arquivos SPIFFS disponíveis:
+  /index.html
+  /style.css
+  /script.js
+  /logo.png
+```
+---
+
 
 ---
 
