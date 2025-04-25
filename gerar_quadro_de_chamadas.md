@@ -70,23 +70,6 @@ http://240.0.0.x
 ```
 Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
 
-
----
-
-## 📂 SPIFFS (Sistema de Arquivos)
-
-## 📂 Estrutura de Software do ESP32 WROOM
-
-```
-quadro_de_chamadas/
-├── quadro_de_chamadas.ino
-└── data/
-    ├── index.html
-    ├── style.css
-    ├── script.js
-    └── logo.png
-```
-
 ---
 
 ## 🔧 Como Usar
@@ -101,16 +84,80 @@ quadro_de_chamadas/
 4. Faça upload do código para o ESP32.
 5. Acesse o IP do ESP32 no navegador 🔍.
 
- ## Códigos de programação 
+ ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
  Todos os programas desenvolvidos estão disponibilidados para livre acesso e utilização como modelo para outras aplicações e estao neste repodiório na para Qaudro_de_chamada
 
+```
+quadro_de_chamadas/
+├── quadro_de_chamadas.ino
+└── data/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── logo.png
+```
 ---
 
-## 📡 Exemplo de Resposta JSON
+## 📡 EComunicação entre o sensor o ESP32 e a Pagina HTML:  JSON
 
+## 🧐 Visão Geral
+
+- O **ESP32** (programa `.ino`) gera um **JSON** com os dados.
+- A **página HTML** faz uma **requisição HTTP** para buscar o JSON.
+- O **ESP32 responde** com o JSON.
+- O **JavaScript da página** interpreta o JSON e **atualiza a interface**.
+
+---
+
+### 1. No ESP32 (.ino)
+
+```cpp
+void handleStatus() {
+  String json = "{";
+  json += "\"temperatura\":24.5,";
+  json += "\"umidade\":60.0,";
+  json += "\"entrada1\":true,";
+  json += "\"entrada2\":false";
+  json += "}";
+  server.send(200, "application/json", json);
+}
 ```
-GET /status.json
+
+- O ESP32 cria uma **resposta JSON** e envia para quem acessar `/status.json`.
+
+### 2. No HTML + JavaScript
+
+```html
+<script>
+function atualizarDados() {
+  fetch('/status.json')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // Exibe o JSON no console
+      document.getElementById('temp').innerText = data.temperatura + ' °C';
+      document.getElementById('umid').innerText = data.umidade + ' %';
+    })
+    .catch(error => console.error('Erro:', error));
+}
+
+// Atualiza a cada 5 segundos
+setInterval(atualizarDados, 5000);
+</script>
+
+<p>Temperatura: <span id="temp">--</span></p>
+<p>Umidade: <span id="umid">--</span></p>
+```
+
+- `fetch('/status.json')` pede o JSON.
+- O JavaScript atualiza o HTML com os dados recebidos.
+
+---
+
+## 💾 Exemplo de JSON recebido
+
+```json
+
 {
   "temperatura": 24.5,
   "umidade": 60.0,
@@ -121,6 +168,23 @@ GET /status.json
   "entrada4": false
 }
 ```
+
+- **JSON** é apenas **texto estruturado** em pares **chave: valor**.
+- O navegador entende e usa facilmente essas informações.
+
+---
+
+## 📝 Resumo do Fluxo
+
+ESP32 gera JSON -> HTML pede JSON -> ESP32 responde -> HTML atualiza tela
+
+| No ESP32 (.ino) | Na Página HTML/JS |
+|:---------------|:-------------------|
+| Monta e envia o JSON | Faz `fetch` e consome o JSON |
+| Usa `server.send(...)` | Usa `fetch('/status.json')` |
+| Dados gerados | Dados exibidos |
+
+---
 
  ## 🔍 Monitor Serial
 
@@ -136,9 +200,6 @@ Arquivos SPIFFS disponíveis:
   /script.js
   /logo.png
 ```
----
-
-
 ---
 
 ## 💾 O que é SPIFFS?
