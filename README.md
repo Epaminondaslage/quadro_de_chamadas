@@ -49,7 +49,7 @@ Este projeto implementa um painel de chamadas interativo utilizando o microcontr
 
 ---
 
-## 📂 Estrutura de Software
+## 📂 Estrutura de Software do ESP32 WROOM
 
 ```
 quadro_de_chamadas/
