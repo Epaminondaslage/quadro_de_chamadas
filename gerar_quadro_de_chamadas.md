@@ -2,6 +2,8 @@
 
 ## 🔬 Descrição Técnica do Projeto
 
+
+
 Este projeto implementa um painel de chamadas interativo utilizando o microcontrolador **ESP32 🔌**, com os seguintes recursos:
 
 - 🔹 4 entradas digitais (botões de chamada)
@@ -86,7 +88,7 @@ Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de In
 
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
- Todos os programas desenvolvidos estão disponibilidados para livre acesso e utilização como modelo para outras aplicações e estao neste repodiório na para Qaudro_de_chamada
+Todos os programas desenvolvidos encontram-se disponibilizados neste repositório, na pasta **Quadro_de_chamadas**, e podem ser livremente acessados e utilizados como referência para o desenvolvimento de outras aplicações.
 
 ```
 quadro_de_chamadas/
@@ -100,6 +102,8 @@ quadro_de_chamadas/
 ---
 
 ## 📡 EComunicação entre o sensor o ESP32 e a Pagina HTML:  JSON
+
+O  **JSON** é apenas **texto estruturado** em pares **chave: valor**. O navegador entende e usa facilmente essas informações.
 
 ## 🧐 Visão Geral
 
@@ -169,9 +173,6 @@ setInterval(atualizarDados, 5000);
 }
 ```
 
-- **JSON** é apenas **texto estruturado** em pares **chave: valor**.
-- O navegador entende e usa facilmente essas informações.
-
 ---
 
 ## 📝 Resumo do Fluxo
@@ -212,9 +213,5 @@ Arquivos SPIFFS disponíveis:
 
 > 📘 **Referência:**  
 > Consulte o [Guia de uso do SPIFFS no ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/spiffs_esp32_guia.md) para mais detalhes sobre o sistema de arquivos SPIFFS.
-
-
----
-
 
 ---
