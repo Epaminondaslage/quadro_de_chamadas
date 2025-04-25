@@ -44,9 +44,13 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ---
 
-## Aula Prática
+## Guia de Aula Prática: Montagem do Quadro de Chamadas
 
-[Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md)
+Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**, esta aula prática propõe a montagem de um **Quadro de Chamadas de Enfermagem**, que será instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
+
+Durante a atividade, os alunos aplicarão conceitos de eletrônica, comandos elétricos e automação, utilizando botões tipo pera, arandelas de sinalização e um sistema de controle baseado em microcontrolador **ESP32** com interface web.
+
+🔗 Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
 
 ---
 
