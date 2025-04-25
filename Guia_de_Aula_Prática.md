@@ -8,7 +8,12 @@ Capacitar os alunos do **2º ano do Curso de Eletrotécnica** na montagem de um 
 
 Cada box terá:
 - Um **interruptor tipo pera** para acionar o chamado.
+
+<img src="img/interruptor_tipo_pera.png" alt="interruptor_pera" width="200">
+
 - Uma **arandela vermelha** para sinalizar a solicitação de presença de um profissional de enfermagem.
+
+<img src="img/arandela.png" alt="iarandela" width="200">
 
 O quadro central controlará as chamadas via **ESP32**, com registro e monitoramento através de uma **interface web**.
 
