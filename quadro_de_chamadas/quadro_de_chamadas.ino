@@ -23,24 +23,12 @@ bool buzzerAtivo = false;
 unsigned long buzzerDesligadoAte = 0;
 
 void handleStatus() {
+  Serial.println('status.json requested');
   float temperatura = dht.readTemperature();
   float umidade = dht.readHumidity();
 
-  String json = "{";
-  json += "\"temperatura\":";
-  json += isnan(temperatura) ? "\"Ind\"" : String(temperatura, 1);
-  json += ",";
-  json += "\"umidade\":";
-  json += isnan(umidade) ? "\"Ind\"" : String(umidade, 1);
-  json += ",";
-  json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
-
-  for (int i = 0; i < 4; i++) {
-    json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
-    if (i < 3) json += ",";
-  }
-  json += "}";
-
+  String json = getJsonAsString(temperatura, umidade);
+  Serial.println(json);
   server.send(200, "application/json", json);
 }
 
@@ -62,7 +50,7 @@ void setup() {
   Serial.println("WiFi conectado");
   Serial.print("IP atribuído: ");
   Serial.println(WiFi.localIP());
-
+  delay(1000);
   dht.begin();
 
   if (!SPIFFS.begin(true)) {
@@ -85,15 +73,15 @@ void setup() {
   }
 
   for (int i = 0; i < 4; i++) {
-    pinMode(entradas[i], INPUT);
+    pinMode(entradas[i], INPUT_PULLDOWN);
     pinMode(saidas[i], OUTPUT);
   }
   pinMode(buzzerPin, OUTPUT);
-  pinMode(botaoMute, INPUT);
+  pinMode(botaoMute, INPUT_PULLDOWN);
 
-  server.serveStatic("/", SPIFFS, "/");
   server.on("/status.json", handleStatus);
   server.on("/mute", handleMute);
+  server.serveStatic("/", SPIFFS, "/");
 
   server.onNotFound([]() {
     if (!handleFileRead(server.uri())) {
@@ -102,6 +90,20 @@ void setup() {
   });
 
   server.begin();
+}
+
+String getJsonAsString(float temperatura, float umidade){
+  String json = "{";
+    json += "\"temperatura\":" + String(temperatura, 1) + ",";
+    json += "\"umidade\":" + String(umidade, 1) + ",";
+    json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
+
+    for (int i = 0; i < 4; i++) {
+      json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
+      if (i < 3) json += ",";
+    }
+    json += "}";
+    return json;
 }
 
 void loop() {
@@ -115,52 +117,17 @@ void loop() {
       buzzerAtivo = true;
     }
   }
-
+  /*
   if (digitalRead(botaoMute)) {
     buzzerDesligadoAte = millis() + 60000;
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
-  }
+  }*/
 
   if (millis() > buzzerDesligadoAte) {
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
   }
-
-  float temperatura = dht.readTemperature();
-  float umidade = dht.readHumidity();
-
-  if (!isnan(temperatura) && !isnan(umidade)) {
-    Serial.println("===== DADOS DHT11 =====");
-    Serial.print("Temperatura: ");
-    Serial.print(temperatura);
-    Serial.println(" °C");
-
-    Serial.print("Umidade: ");
-    Serial.print(umidade);
-    Serial.println(" %");
-
-    // Gerar e mostrar o JSON no loop
-    String json = "{";
-    json += "\"temperatura\":" + String(temperatura, 1) + ",";
-    json += "\"umidade\":" + String(umidade, 1) + ",";
-    json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
-
-    for (int i = 0; i < 4; i++) {
-      json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
-      if (i < 3) json += ",";
-    }
-    json += "}";
-
-    Serial.println("===== JSON GERADO (LOOP) =====");
-    Serial.println(json);
-    Serial.println("==============================");
-
-  } else {
-    Serial.println("Falha na leitura do sensor DHT11.");
-  }
-
-  delay(5000);
 }
 
 bool handleFileRead(String path) {
