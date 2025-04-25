@@ -52,9 +52,16 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ## Projeto de um Quadro de Chamadas de Enfermagem Didático
 
-O Quadro de Chamadas  a ser utilizado foi desenvolvido por professores do CEFET-MG com fins didáticos, visando proporcionar aos alunos uma experiência prática em sistemas de automação e monitoramento. Utilizando o microcontrolador ESP32, o projeto simula um sistema real de chamadas de enfermagem, permitindo a integração de entradas digitais (botões tipo pera) e saídas visuais (arandelas vermelhas) acionadas via relés. O sistema inclui ainda uma interface web para acompanhamento em tempo real das solicitações, reforçando conceitos de eletrônica, redes e programação embarcada.
+O **Quadro de Chamadas** foi desenvolvido por professores do **CEFET-MG** com fins didáticos, com o objetivo de proporcionar aos alunos uma experiência prática em sistemas de automação e monitoramento. Utilizando o microcontrolador **ESP32**, o projeto simula um sistema real de chamadas de enfermagem, integrando entradas digitais (botões tipo pera) e saídas visuais (arandelas vermelhas) acionadas por relés. Além disso, inclui uma interface web para acompanhamento em tempo real das solicitações, reforçando conceitos de eletrônica, redes de comunicação e programação embarcada.
 
-➡️ Para mais detalhes, consulte: ./Quadro_de_Chamadas_ESP32.md
+➡️ Para mais detalhes, consulte: [Projeto Quadro de Chamadas ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Projeto_Quadro_de_Chamadas_ESP32.md)
+
+---
+
+
+
+
+
 
 
 
