@@ -18,8 +18,8 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 ## 📡 Conexão Wi-Fi
 
 ```cpp
-#define SSID "PLT-DIR"
-#define PASSWORD "epaminondas"
+#define SSID "DEE-Prediais"
+#define PASSWORD "prediais123"
 ```
 
 ---
