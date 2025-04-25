@@ -1,11 +1,11 @@
-# Projeto: quadro_de_chamadas (ESP32)
+# Projeto: quadro_de_chamadas (ESP32- WROOM)
 
 ## ✅ Visão geral
 
 Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 
 - Conexão Wi-Fi
-- Sensor de temperatura e umidade DHT22
+- Sensor de temperatura e umidade DHT11
 - Buzzer
 - Quatro entradas digitais
 - Quatro saídas digitais
@@ -24,7 +24,7 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 
 ---
 
-## 🌡 Sensor DHT22
+## 🌡 Sensor DHT11
 
 - Ligado ao GPIO 15
 - Mostra temperatura e umidade no display e na interface web
