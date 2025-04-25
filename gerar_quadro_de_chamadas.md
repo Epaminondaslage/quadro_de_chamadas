@@ -117,7 +117,7 @@ GET /status.json
 
 ## 💾 O que é SPIFFS?
 
-**SPIFFS.h** é a biblioteca utilizada no ESP32 e ESP8266 para armazenar e gerenciar arquivos na memória flash da placa, como um mini "pendrive" interno 📥.
+**SPIFFS.h** é a biblioteca utilizada no ESP32  para armazenar e gerenciar arquivos na memória flash da placa, como um mini "pendrive" interno 📥.
 
 > **SPIFFS** = *SPI Flash File System*
 
