@@ -1,4 +1,4 @@
-# Projeto: Quadro Sinalizador de Chamadas de Enfermagem
+# Quadro Sinalizador de Chamadas de Enfermagem
 
 ## 📢 O que é um sistema de chamada de enfermagem?
 
@@ -44,9 +44,29 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ---
 
-## Aula Prática
+## Guia de Aula Prática: Montagem do Quadro de Chamadas
 
-[Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md)
+Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**, esta aula prática propõe a montagem de um **Quadro de Chamadas de Enfermagem**, que será instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
+
+Durante a atividade, os alunos aplicarão conceitos de eletrônica, comandos elétricos e automação, utilizando botões tipo pera, arandelas de sinalização e um sistema de controle baseado em microcontrolador **ESP32** com interface web.
+
+🔗 Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
+
+---
+
+## Projeto de um Quadro de Chamadas de Enfermagem Didático
+
+O **Quadro de Chamadas** foi desenvolvido por professores do **CEFET-MG** com fins didáticos, com o objetivo de proporcionar aos alunos uma experiência prática em sistemas de automação e monitoramento. Utilizando o microcontrolador **ESP32**, o projeto simula um sistema real de chamadas de enfermagem, integrando entradas digitais (botões tipo pera) e saídas visuais (arandelas vermelhas) acionadas por relés. Além disso, inclui uma interface web para acompanhamento em tempo real das solicitações, reforçando conceitos de eletrônica, redes de comunicação e programação embarcada.
+
+➡️ Para mais detalhes, consulte: [Projeto Quadro de Chamadas ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Projeto_Quadro_de_Chamadas_ESP32.md)
+
+---
+
+
+
+
+
+
 
 
 ---
