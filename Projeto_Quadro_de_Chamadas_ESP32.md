@@ -36,6 +36,13 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 - Desativação do buzzer por botão físico ou pela web
 
 ---
+## Porque o ESP32?
+
+O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão Wi-Fi integrada, múltiplos pinos de entrada e saída digitais, alto poder de processamento e ampla memória flash. Essas características permitem a criação de um sistema de monitoramento via navegador, com atualização em tempo real e possibilidade de armazenamento de páginas web (HTML, CSS, JS) diretamente na memória da placa, utilizando SPIFFS. Além disso, o ESP32 é compatível com a plataforma Arduino IDE, facilitando o aprendizado e a programação para alunos do curso técnico.
+
+Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
+
+<img src="[quadro_comercial.png](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/pinout.png)" alt="pinout ESP32" width="300">
 
 ## 📡 Conexão Wi-Fi
 
