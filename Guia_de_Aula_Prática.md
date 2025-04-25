@@ -13,7 +13,7 @@ Cada box terá:
 
 - Uma **arandela vermelha** para sinalizar a solicitação de presença de um profissional de enfermagem.
 
-<img src="img/arandela.png" alt="iarandela" width="200">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/arandela_led.png" alt="arandela" width="200">
 
 O quadro central controlará as chamadas via **ESP32**, com registro e monitoramento através de uma **interface web**.
 
