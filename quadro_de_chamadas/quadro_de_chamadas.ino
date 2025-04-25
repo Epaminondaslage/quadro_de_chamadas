@@ -1,3 +1,4 @@
+
 #include <WiFi.h>
 #include <WebServer.h>
 #include <DHT.h>
@@ -8,7 +9,7 @@
 #define PASSWORD "epaminondas"
 
 #define DHTPIN 15
-#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
 WebServer server(80);
@@ -22,24 +23,12 @@ bool buzzerAtivo = false;
 unsigned long buzzerDesligadoAte = 0;
 
 void handleStatus() {
+  Serial.println('status.json requested');
   float temperatura = dht.readTemperature();
   float umidade = dht.readHumidity();
 
-  String json = "{";
-  json += "\"temperatura\":";
-  json += isnan(temperatura) ? "\"Ind\"" : String(temperatura, 1);
-  json += ",";
-  json += "\"umidade\":";
-  json += isnan(umidade) ? "\"Ind\"" : String(umidade, 1);
-  json += ",";
-  json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
-
-  for (int i = 0; i < 4; i++) {
-    json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
-    if (i < 3) json += ",";
-  }
-  json += "}";
-
+  String json = getJsonAsString(temperatura, umidade);
+  Serial.println(json);
   server.send(200, "application/json", json);
 }
 
@@ -61,7 +50,7 @@ void setup() {
   Serial.println("WiFi conectado");
   Serial.print("IP atribuído: ");
   Serial.println(WiFi.localIP());
-
+  delay(1000);
   dht.begin();
 
   if (!SPIFFS.begin(true)) {
@@ -84,15 +73,15 @@ void setup() {
   }
 
   for (int i = 0; i < 4; i++) {
-    pinMode(entradas[i], INPUT);
+    pinMode(entradas[i], INPUT_PULLDOWN);
     pinMode(saidas[i], OUTPUT);
   }
   pinMode(buzzerPin, OUTPUT);
-  pinMode(botaoMute, INPUT);
+  pinMode(botaoMute, INPUT_PULLDOWN);
 
-  server.serveStatic("/", SPIFFS, "/");
   server.on("/status.json", handleStatus);
   server.on("/mute", handleMute);
+  server.serveStatic("/", SPIFFS, "/");
 
   server.onNotFound([]() {
     if (!handleFileRead(server.uri())) {
@@ -103,28 +92,59 @@ void setup() {
   server.begin();
 }
 
+String getJsonAsString(float temperatura, float umidade){
+  String json = "{";
+    json += "\"temperatura\":" + String(temperatura, 1) + ",";
+    json += "\"umidade\":" + String(umidade, 1) + ",";
+    json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
+
+    for (int i = 0; i < 4; i++) {
+      json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
+      if (i < 3) json += ",";
+    }
+    json += "}";
+    return json;
+}
+// Variáveis para controlar o bip do buzzer
+unsigned long ultimoBip = 0;
+bool buzzerEstado = false; // HIGH ou LOW no buzzer
+
 void loop() {
   server.handleClient();
+  bool algumaEntradaAtiva = false;
 
   for (int i = 0; i < 4; i++) {
     bool estado = digitalRead(entradas[i]);
-    digitalWrite(saidas[i], estado ? HIGH : LOW);
-    if (estado && millis() > buzzerDesligadoAte) {
-      digitalWrite(buzzerPin, HIGH);
-      buzzerAtivo = true;
+    digitalWrite(saidas[i], estado ? LOW : HIGH);
+    if (estado) {
+      algumaEntradaAtiva = true;
     }
   }
-
-  if (digitalRead(botaoMute)) {
-    buzzerDesligadoAte = millis() + 60000;
+  // Verifica botão de mute
+  if (digitalRead(botaoMute) == HIGH) {
+    buzzerDesligadoAte = millis() + 60000; // Mutar por 60 segundos
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
+    buzzerEstado = false;
   }
 
+  // Controle do buzzer
   if (millis() > buzzerDesligadoAte) {
-    digitalWrite(buzzerPin, LOW);
+    if (algumaEntradaAtiva) {
+  tocarAlertaSonoro(); // ➔ Em vez de ligar direto o buzzer, toca o som
+  buzzerAtivo = true;
+  } else {
+    noTone(buzzerPin); // para o som
     buzzerAtivo = false;
   }
+  } else {
+    digitalWrite(buzzerPin, LOW);
+    buzzerAtivo = false;
+    buzzerEstado = false;
+  }
+
+
+
 }
 
 bool handleFileRead(String path) {
@@ -143,4 +163,21 @@ bool handleFileRead(String path) {
     return true;
   }
   return false;
+}
+
+void tocarAlertaSonoro() {
+  tone(buzzerPin, 1000); // Toca 1000 Hz
+  delay(150);
+  noTone(buzzerPin);
+  delay(100);
+
+  tone(buzzerPin, 1500); // Toca 1500 Hz
+  delay(150);
+  noTone(buzzerPin);
+  delay(100);
+
+  tone(buzzerPin, 1200); // Toca 1200 Hz
+  delay(150);
+  noTone(buzzerPin);
+  delay(300);
 }

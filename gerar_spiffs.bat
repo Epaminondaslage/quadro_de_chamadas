@@ -1,11 +1,16 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-:: Caminhos e configurações (ajuste se necessário)
-set MKSPIFFS="C:\Users\epami\AppData\Local\Arduino15\packages\esp32\tools\mkspiffs\0.2.3\mkspiffs.exe"
+:: Caminho para o executável mkspiffs
+set MKSPIFFS="C:\Users\epami\AppData\Local\Programs\Python\Python313\Scripts\mkspiffs-0.2.3-arduino-esp32-win32\mkspiffs.exe"
+
+:: Configurações da flash
 set PORT=COM8
-set SIZE=0x150000
+set SIZE=1441792
 set ADDRESS=0x290000
+
+:: Diretório de dados relativo ao diretório atual
+set DATADIR=.\quadro_de_chamadas\data
 
 echo ===============================================
 echo  GERANDO SPIFFS.BIN E ENVIANDO PARA O ESP32
@@ -18,9 +23,16 @@ if not exist %MKSPIFFS% (
     exit /b
 )
 
-:: Cria a imagem SPIFFS usando a pasta correta
-echo [1] Gerando imagem spiffs.bin da pasta .\quadro_de_chamadas\data
-%MKSPIFFS% -c .\quadro_de_chamadas\data -b 4096 -p 256 -s %SIZE% spiffs.bin
+:: Verifica se a pasta de dados existe
+if not exist %DATADIR% (
+    echo [ERRO] Pasta de dados não encontrada: %DATADIR%
+    pause
+    exit /b
+)
+
+:: Gera a imagem spiffs.bin
+echo [1] Gerando imagem spiffs.bin da pasta %DATADIR%
+%MKSPIFFS% -c %DATADIR% -b 4096 -p 256 -s %SIZE% spiffs.bin
 
 if not exist spiffs.bin (
     echo [ERRO] A imagem spiffs.bin nao foi gerada!
@@ -28,7 +40,11 @@ if not exist spiffs.bin (
     exit /b
 )
 
-:: Enviando a imagem para o ESP32 com esptool
+:: Debug se tem arquivos na pasta data
+echo [DEBUG] Listando arquivos gerados em spiffs.bin
+type nul | %MKSPIFFS% -l -b 4096 -p 256 -s %SIZE% spiffs.bin
+
+:: Envia spiffs.bin para o ESP32
 echo [2] Enviando spiffs.bin para o ESP32 via porta %PORT%
 python -m esptool --chip esp32 --port %PORT% --baud 460800 write_flash %ADDRESS% spiffs.bin
 

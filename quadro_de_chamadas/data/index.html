@@ -1,26 +1,33 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Painel ESP32</title>
+  <title>Quadro de Chamadas de Enfermagem</title>
   <link rel="stylesheet" href="/style.css">
   <script src="/script.js" defer></script>
 </head>
 <body>
-  <h1>Painel de Monitoramento</h1>
-  <div class="status">
-    <p>Temperatura: <span id="temp">--</span> °C</p>
-    <p>Umidade: <span id="umid">--</span> %</p>
-    <p>Buzzer: <span id="buzzer">--</span></p>
-  </div>
+  <header>
+    <img src="/logo.png" alt="Logo">
+    <h1>Quadro de Chamadas de Enfermagem</h1>
+    <div class="status">
+      <p>Temperatura: <span id="temp">--</span> °C</p>
+      <p>Umidade: <span id="umid">--</span> %</p>
+      <p> </p>
+      <p>Chamada: <span id="buzzer">--</span></p>
+    </div>
+  </header>
+
   <div class="entradas">
-    <div><span class="bolinha red" id="e1"></span> Entrada 1</div>
-    <div><span class="bolinha red" id="e2"></span> Entrada 2</div>
-    <div><span class="bolinha red" id="e3"></span> Entrada 3</div>
-    <div><span class="bolinha red" id="e4"></span> Entrada 4</div>
+    <div><span class="bolinha gray" id="e1"></span> Box Didático 1</div>
+    <div><span class="bolinha gray" id="e2"></span> Box Didático 2</div>
+    <div><span class="bolinha gray" id="e3"></span> Box Didático 3</div>
+    <div><span class="bolinha gray" id="e4"></span> Box Didático 4</div>
   </div>
-  <button onclick="desativarBuzzer()">Desativar Buzzer</button>
-  <img src="/logo.png" alt="Logo">
+
+  <div style="margin-top: 30px;">
+    <button id="buzzerButton" onclick="desativarBuzzer()">Desativar Alerta</button>
+  </div>
 </body>
 </html>
