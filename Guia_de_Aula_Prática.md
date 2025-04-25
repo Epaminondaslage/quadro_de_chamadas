@@ -9,11 +9,11 @@ Capacitar os alunos do **2º ano do Curso de Eletrotécnica** na montagem de um 
 Cada box terá:
 - Um **interruptor tipo pera** para acionar o chamado.
 
-<img src="img/interruptor_tipo_pera.png" alt="interruptor_pera" width="200">
+<img src="img/interruptor_tipo_pera.png" alt="interruptor_pera" width="100">
 
 - Uma **arandela vermelha** para sinalizar a solicitação de presença de um profissional de enfermagem.
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/arandela_led.png" alt="arandela" width="200">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/arandela_led.png" alt="arandela" width="100">
 
 O quadro central controlará as chamadas via **ESP32**, com registro e monitoramento através de uma **interface web**.
 
@@ -21,7 +21,7 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 | Quantidade | Componente                        | Descrição                                 |
 |------------|-----------------------------------|---------------------------------------------|
-| 1          | Qaudro de Camada de Enfermagem    | Microcontrolador e dispositivos eletronicos internos                 |
+| 1          | Quadro de Camada de Enfermagem    | Microcontrolador e dispositivos eletronicos internos                 |
 | 4          | Interruptor tipo pera             | Acionadores de chamada                     |
 | 4          | Arandelas vermelhas (12V ou 127V)  | Indicadores de chamada                     |
 | 1          | Fonte 127V (conforme arandela) | Fonte de alimentação das arandelas   |
