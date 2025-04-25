@@ -6,6 +6,8 @@
 
 Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais.
 
+<img src="./img/quadro_comercial.png" alt="Quadro Comercial" width="300">
+
 Além disso, o sistema permite que os profissionais de saúde **registrem a sua presença no leito** do paciente que gerou a chamada, sinalizando ao restante da equipe que o **atendimento está em andamento**.
 
 ## 🔧 Como funciona um sistema de chamada de enfermagem?
