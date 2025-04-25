@@ -18,7 +18,7 @@ Dispositivos fixados na parede ou painéis de gases medicinais, acessíveis por 
 
 ### 🔦 Sinaleiro de Porta
 
-Indicadores visuais fixados **acima das portas** para alertar sobre chamadas em andamento, utilizando diferentes **cores 🟥🟢🟦🟧**.
+Indicadores visuais fixados **acima das portas** para alertar sobre chamadas em andamento, utilizando diferentes **cores 🟥**.
 
 ### 🛋️ Central do Posto de Enfermagem
 
