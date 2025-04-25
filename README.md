@@ -46,6 +46,12 @@ Este projeto implementa um painel de chamadas interativo utilizando o microcontr
 - 🔄 Atualizações automáticas da página usando AJAX
 - 🖥️ Interface web responsiva hospedada no ESP32
 
+
+## Aula Prática
+
+[Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md)
+
+
 ---
 
 ---
