@@ -3,24 +3,6 @@
 Este projeto desenvolve um painel de chamadas interativo baseado no microcontrolador ESP32 🔌, integrando funcionalidades de automação, conectividade e monitoramento em tempo real. O sistema permite a ativação de chamadas por meio de botões tipo pera e sinaliza a solicitação através de arandelas luminosas controladas por relés. Além disso, disponibiliza uma interface web moderna, acessível via Wi-Fi, para visualização do status das chamadas, monitoramento de temperatura e umidade, e controle do buzzer de alerta.
 A estrutura modular e a programação flexível do ESP32 garantem escalabilidade, permitindo futuras expansões como notificações remotas e integração com redes de automação predial.
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
-
-- 🔹 4 entradas digitais (botões de chamada)
-- 🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
-- 🔹 Buzzer 🔊 com controle de desativação temporária (mute)
-- 🌡️ Sensor de temperatura e umidade **DHT11**
-- 🖥️ Interface web moderna, servida via **SPIFFS**
----
-
-## 🌐 Funcionalidades
-
-- 🔢 Exibição da temperatura e umidade em tempo real (acessível por Wi-Fi 📡)
-- 🔹 Indicadores visuais de entrada (bolinhas cinza e verde 🔘)
-- 💔 Botão para desativar o buzzer por 1 minuto
-- 🌍 Logotipo do **CEFET-MG** exibido via SPIFFS
-- 🔄 Atualizações automáticas da página usando AJAX
-- 🖥️ Interface web responsiva hospedada no ESP32
-
 ## ✅ Visão geral
 
 Este projeto implementa um painel de monitoramento com ESP32 utilizando:
@@ -35,14 +17,32 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 - Desativação do buzzer por botão físico ou pela web
 
 ---
+## 🌐 Funcionalidades
+
+- 🔢 Exibição da temperatura e umidade em tempo real (acessível por Wi-Fi 📡)
+- 🔹 Indicadores visuais de entrada (bolinhas cinza e verde 🔘)
+- 💔 Botão para desativar o buzzer por 1 minuto
+- 🌍 Logotipo do **CEFET-MG** exibido via SPIFFS
+- 🔄 Atualizações automáticas da página usando AJAX
+- 🖥️ Interface web responsiva hospedada no ESP32
+
+---
+
 ## Porque o ESP32?
 
 O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão Wi-Fi integrada, múltiplos pinos de entrada e saída digitais, alto poder de processamento e ampla memória flash. Essas características permitem a criação de um sistema de monitoramento via navegador, com atualização em tempo real e possibilidade de armazenamento de páginas web (HTML, CSS, JS) diretamente na memória da placa, utilizando SPIFFS. Além disso, o ESP32 é compatível com a plataforma Arduino IDE, facilitando o aprendizado e a programação para alunos do curso técnico.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
 
 Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
 
 <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/pinout.png" alt="Pinout ESP32" width="300">
 
+- 🔹 4 entradas digitais (botões de chamada)
+- 🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
+- 🔹 Buzzer 🔊 com controle de desativação temporária (mute)
+- 🌡️ Sensor de temperatura e umidade **DHT11**
+- 🖥️ Interface web moderna, servida via **SPIFFS**
 
 ## 📡 Conexão Wi-Fi
 
