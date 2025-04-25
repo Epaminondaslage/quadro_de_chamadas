@@ -30,22 +30,22 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 Este projeto implementa um painel de chamadas interativo utilizando o microcontrolador **ESP32 🔌**, com os seguintes recursos:
 
-- 🔹 4 entradas digitais (botões de chamada)
-- 🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
-- 🔹 Buzzer 🔊 com controle de desativação temporária (mute)
-- 🌡️ Sensor de temperatura e umidade **DHT11**
-- 🖥️ Interface web moderna, servida via **SPIFFS**
+🔹 4 entradas digitais (botões de chamada)
+🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
+🔹 Buzzer 🔊 com controle de desativação temporária (mute)
+🌡️ Sensor de temperatura e umidade **DHT11**
+🖥️ Interface web moderna, servida via **SPIFFS**
 
 ---
 
 ## 🌐 Funcionalidades
 
-- 🔢 Exibição da temperatura e umidade em tempo real (acessível por Wi-Fi 📡)
-- 🔹 Indicadores visuais de entrada (bolinhas cinza e verde 🔘)
-- 💔 Botão para desativar o buzzer por 1 minuto
-- 🌍 Logotipo do **CEFET-MG** exibido via SPIFFS
-- 🔄 Atualizações automáticas da página usando AJAX
-- 🖥️ Interface web responsiva hospedada no ESP32
+🔢 Exibição da temperatura e umidade em tempo real (acessível por Wi-Fi 📡)
+🔹 Indicadores visuais de entrada (bolinhas cinza e verde 🔘)
+💔 Botão para desativar o buzzer por 1 minuto
+🌍 Logotipo do **CEFET-MG** exibido via SPIFFS
+🔄 Atualizações automáticas da página usando AJAX
+🖥️ Interface web responsiva hospedada no ESP32
 
 ---
 
