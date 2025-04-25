@@ -1,9 +1,9 @@
 # Projeto: quadro_de_chamadas (ESP32- WROOM)
 
-Este projeto implementa um painel de chamadas interativo utilizando o microcontrolador **ESP32 🔌**, com os seguintes recursos:
+Este projeto desenvolve um painel de chamadas interativo baseado no microcontrolador ESP32 🔌, integrando funcionalidades de automação, conectividade e monitoramento em tempo real. O sistema permite a ativação de chamadas por meio de botões tipo pera e sinaliza a solicitação através de arandelas luminosas controladas por relés. Além disso, disponibiliza uma interface web moderna, acessível via Wi-Fi, para visualização do status das chamadas, monitoramento de temperatura e umidade, e controle do buzzer de alerta.
+A estrutura modular e a programação flexível do ESP32 garantem escalabilidade, permitindo futuras expansões como notificações remotas e integração com redes de automação predial.
 
-
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32.png" alt="esp32" width="150">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
 
 - 🔹 4 entradas digitais (botões de chamada)
 - 🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
