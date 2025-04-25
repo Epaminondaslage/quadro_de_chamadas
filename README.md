@@ -102,7 +102,9 @@ GET /status.json
 
 É um sistema de arquivos leve e eficiente, ideal para microcontroladores.
 
-**Veja maiores detalhes no arquivo `spiffs_esp32_guia.md`**.
+> 📘 **Referência:**  
+> Consulte o [Guia de uso do SPIFFS no ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/spiffs_esp32_guia.md) para mais detalhes sobre o sistema de arquivos SPIFFS.
+
 
 ---
 
