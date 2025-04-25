@@ -46,10 +46,25 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 
 ## 📡 Conexão Wi-Fi
 
+Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se conectar à rede Wi-Fi do Laboratório de Instalações Prediais utilizando as seguintes credenciais:
+
 ```cpp
 #define SSID "DEE-Prediais"
 #define PASSWORD "prediais123"
 ```
+Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet ou smartphone) e digitar o IP do ESP32 para acessar o painel de chamadas, visualizar o status das entradas e saídas e monitorar as informações de temperatura e umidade em tempo real.
+
+---
+## 🌐 Acesso à interface
+
+Abra no navegador:
+
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/dht11.png" alt="dht11" width="200">
+
+```
+http://240.0.0.x
+```
+Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
 
 ---
 
@@ -69,7 +84,7 @@ O DHT11 é um sensor digital de baixo custo usado para medir temperatura e umida
 
 O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele é muito comum em projetos de automação, sistemas de alarme, interfaces de usuário e aplicações educacionais. Existem duas versões principais: o buzzer ativo e o buzzer passivo, cada um com características específicas.
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/buzzer.png" alt="dht11" width="1500">
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/buzzer.png" alt="dht11" width="150">
 
 - Ativado por qualquer uma das 4 entradas digitais
 - Desligado por:
@@ -77,32 +92,7 @@ O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele 
   - Botão na interface web
 - Fica desativado por 60 segundos
 
-
-## 🌐 Acesso à interface
-
-Abra no navegador:
-
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/dht11.png" alt="dht11" width="200">
-
-```
-http://240.0.0.x
-```
-Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
-
-
 ---
-
-## 🔧 Como Usar
-
-1. Abra `quadro_de_chamadas.ino` na IDE do Arduino.
-2. Instale as bibliotecas necessárias:
-   - `WiFi` 📡
-   - `WebServer` 🔹
-   - `DHT sensor library` 🌡️
-   - `Adafruit Unified Sensor`
-3. Envie os arquivos da pasta `data/` para o SPIFFS (plugin ESP32 Sketch Data Upload).
-4. Faça upload do código para o ESP32.
-5. Acesse o IP do ESP32 no navegador 🔍.
 
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
@@ -118,6 +108,17 @@ quadro_de_chamadas/
     └── logo.png
 ```
 ---
+
+## 🔧 Como Usar os códigos
+
+1. Abra `quadro_de_chamadas.ino` na IDE do Arduino.
+2. Instale as bibliotecas necessárias:
+   - `WiFi` 📡
+   - `WebServer` 🔹
+   - `DHT sensor library` 🌡️
+3. Faça upload do código para o ESP32.
+4. Envie os arquivos da pasta `data/` para o SPIFFS. Veja o tutorial: [Guia de uso do SPIFFS no ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/spiffs_esp32_guia.md) para mais detalhes sobre o sistema de arquivos SPIFFS e como fazer upload no ˜ESP32.
+5. Acesse o IP do ESP32 no navegador 🔍.
 
 ## 📡 EComunicação entre o sensor o ESP32 e a Pagina HTML:  JSON
 
