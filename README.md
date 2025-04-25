@@ -1,4 +1,4 @@
-# Projeto: Quadro Sinalizador de Chamadas de Enfermagem
+# Quadro Sinalizador de Chamadas de Enfermagem
 
 ## 📢 O que é um sistema de chamada de enfermagem?
 
