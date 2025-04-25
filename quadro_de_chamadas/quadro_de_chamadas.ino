@@ -8,7 +8,7 @@
 #define PASSWORD "epaminondas"
 
 #define DHTPIN 15
-#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
 WebServer server(80);
@@ -125,6 +125,41 @@ void loop() {
     digitalWrite(buzzerPin, LOW);
     buzzerAtivo = false;
   }
+
+  float temperatura = dht.readTemperature();
+  float umidade = dht.readHumidity();
+
+  if (!isnan(temperatura) && !isnan(umidade)) {
+    Serial.println("===== DADOS DHT11 =====");
+    Serial.print("Temperatura: ");
+    Serial.print(temperatura);
+    Serial.println(" °C");
+
+    Serial.print("Umidade: ");
+    Serial.print(umidade);
+    Serial.println(" %");
+
+    // Gerar e mostrar o JSON no loop
+    String json = "{";
+    json += "\"temperatura\":" + String(temperatura, 1) + ",";
+    json += "\"umidade\":" + String(umidade, 1) + ",";
+    json += "\"buzzer\":" + String(buzzerAtivo ? "true" : "false") + ",";
+
+    for (int i = 0; i < 4; i++) {
+      json += "\"entrada" + String(i + 1) + "\":" + String(digitalRead(entradas[i]) ? "true" : "false");
+      if (i < 3) json += ",";
+    }
+    json += "}";
+
+    Serial.println("===== JSON GERADO (LOOP) =====");
+    Serial.println(json);
+    Serial.println("==============================");
+
+  } else {
+    Serial.println("Falha na leitura do sensor DHT11.");
+  }
+
+  delay(5000);
 }
 
 bool handleFileRead(String path) {
