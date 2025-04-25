@@ -42,7 +42,7 @@ O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão
 
 Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
 
-<img src="(https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/pinout.png)" alt="pinout ESP32" width="300">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/pinout.png" alt="pinout ESP32" width="300">
 
 ## 📡 Conexão Wi-Fi
 
