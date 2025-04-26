@@ -24,7 +24,7 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 | 1          | Quadro de Camada de Enfermagem    | Microcontrolador e dispositivos eletronicos internos                 |
 | 4          | Interruptor tipo pera             | Acionadores de chamada                     |
 | 4          | Arandelas vermelhas (127V)  | Indicadores de chamada                     |
-| 1          | Fonte 127V (conforme arandela) | Fonte de alimentação das arandelas   |
+| 1          | Fonte 127V  | Fonte de alimentação para o Quadro de chamadas   |
 | Cabos      | Fios para conexões                | Ligação dos dispositivos                  |
 
 ## 📊 Esquema de Conexão
