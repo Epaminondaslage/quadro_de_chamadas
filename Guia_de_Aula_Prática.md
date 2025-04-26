@@ -29,9 +29,11 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ## 📊 Esquema de Conexão
 
-- **Interruptores tipo pera** conectados às **entradas digitais** do ESP32 (com resistor de pull-down se necessário).
-- **Arandelas** conectadas a **relés**, acionados pelas **saídas digitais** do ESP32.
-- **Quandro de Chamadas de Enfermagem** 
+- **Interruptores tipo pera** conectados às **entradas digitais** do Quadro onde está o ESP32.
+- **Arandelas** conectadas a sídas dos **relés**, acionados pelas **saídas digitais** do ESP32.
+- **Quandro de Chamadas de Enfermagem** alimentado em rede de 127V
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/ligacao.png" alt="box" width="600">  
 
 ## 🔧 Procedimento de Montagem
 
