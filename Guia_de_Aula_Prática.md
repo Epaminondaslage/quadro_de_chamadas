@@ -35,6 +35,10 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ## 🔧 Procedimento de Montagem
 
+
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="400">
+
 ### 1. Ligação dos Interruptores
 - Fixar o interruptor tipo pera em local acessível dentro de cada Box Didático
 - Conectar uma extremidade ao GND e a outra a uma entrada digital do ESP32 através do cabo UTP CAT 5 já instalado.
