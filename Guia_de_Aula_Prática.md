@@ -35,31 +35,24 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ## 🔧 Procedimento de Montagem
 
-
-
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="400">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="600">
 
 ### 1. Ligação dos Interruptores
 - Fixar o interruptor tipo pera em local acessível dentro de cada Box Didático
-- Conectar uma extremidade ao GND e a outra a uma entrada digital do ESP32 através do cabo UTP CAT 5 já instalado.
+- Conectar uma extremidade do UTP e a outra a uma entrada no painel do ESP32 através do cabo UTP já instalado.
 
 ### 2. Ligação das Arandelas
 - Instalar a arandela vermelha acima da porta dos Boxes 1 a 4.
-- Conectar a arandela a saída de cada um relês.
-- O relê será acionado pela saída digital correspondente no ESP32.
+- Conectar uma extremidade do cabo à arandela e a outra a uma entrada no painel do ESP32 através do cabo 1mm2 já instalado.
 
 ### 3. Instalação do Quadro de Chamadas
-- Montar todo o circuito na base ( painel ) conectando os condutores conforme esquema que segue.
-
+- Montar todo o circuito na base (painel) conectando os condutores conforme esquema que segue.
 
 ### 5. Testes Finais
 - Acionar cada interruptor e verificar se a respectiva arandela acende.
 - Testar o acesso à interface web para monitorar os estados.
 
-
 ## 📊 Atividades Propostas
-
-- Realizar a montagem elétrica completa.
--
+- Realizar a montagem elétrica e mecânica dos equipamentos.
 
 
