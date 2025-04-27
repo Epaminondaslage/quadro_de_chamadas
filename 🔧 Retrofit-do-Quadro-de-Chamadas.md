@@ -20,7 +20,7 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 - **Separacão dos circuitos** de controle (ESP32) e de iluminação (LEDs), garantindo maior proteção e robustez.
   
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.png" alt="Painel Modernizado" width="30%">
+  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="30%">
 </p>
 
 ---
