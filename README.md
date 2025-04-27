@@ -44,6 +44,15 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ---
 
+## Retrofit do Quadro de Chamadas de Enfermagem
+
+### O que é Retrofit?
+
+**Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
+
+🔗 Para detalhes completos do procedimento de retrofit veja  [rtetrofit](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
+
+
 ## Guia de Aula Prática: Montagem do Quadro de Chamadas
 
 Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**, esta aula prática propõe a montagem de um **Quadro de Chamadas de Enfermagem**, que será instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
