@@ -50,7 +50,7 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 **Retrofit** é o processo de **modernização e aprimoramento de sistemas, equipamentos ou estruturas já existentes**, visando **aumentar sua eficiência, funcionalidade e segurança**, ao mesmo tempo em que os adapta às **novas tecnologias**.  Em vez de substituir totalmente o que já foi construído, o retrofit promove uma **renovação inteligente**, aproveitando a infraestrutura física disponível e incorporando melhorias técnicas capazes de atender às exigências contemporâneas de desempenho e inovação.
 
-🔗 Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
+➡️ Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
 
 
 ## Guia de Aula Prática: Montagem do Quadro de Chamadas
@@ -59,7 +59,7 @@ Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**,
 
 Durante a atividade, os alunos aplicarão conceitos de eletrônica, comandos elétricos e automação, utilizando botões tipo pera, arandelas de sinalização e um sistema de controle baseado em microcontrolador **ESP32** com interface web.
 
-🔗 Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
+➡️ Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
 
 ---
 
