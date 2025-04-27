@@ -4,7 +4,7 @@
 
 É um sistema que permite aos pacientes sinalizar a necessidade de assistência por parte da equipe de enfermagem, geralmente em ambientes hospitalares ou casas de repouso. Ele utiliza sinais sonoros e luminosos para alertar os profissionais de saúde sobre a necessidade de atendimento. 
 
-Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais.
+Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais. Veja na imagem que segue um modelo comercial empregado em hospitais e clinicas.
 
 <img src="./img/quadro_comercial.png" alt="Quadro Comercial" width="300">
 
