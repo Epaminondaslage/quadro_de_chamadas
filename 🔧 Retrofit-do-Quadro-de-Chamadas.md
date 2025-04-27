@@ -1,5 +1,3 @@
-🔧 Resumo do Retrofit do Quadro de Chamadas
-
 # 🔧 Retrofit do Quadro de Chamadas de Enfermagem
 
 ## 🔬 O que é Retrofit?
