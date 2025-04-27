@@ -4,9 +4,10 @@
 
 ## 🔬 O que é Retrofit?
 
-**Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. 
-
-Em resumo, é uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
+**Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="30%">
+</p>
 
 ---
 
@@ -18,10 +19,20 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 - Controle dos LEDs utilizando um **microcontrolador ESP32**.
 - Atualização do sistema de alimentação para **baixa tensão**, aumentando a segurança e evitando riscos de curtos-circuitos.
 - **Separacão dos circuitos** de controle (ESP32) e de iluminação (LEDs), garantindo maior proteção e robustez.
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas1.jpeg" alt="Detalhe 1" width="30%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas2.jpeg" alt="Detalhe 2" width="30%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 3" width="30%">
+    </td>
+  </tr>
+</table>
   
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="30%">
-</p>
 
 ---
 
