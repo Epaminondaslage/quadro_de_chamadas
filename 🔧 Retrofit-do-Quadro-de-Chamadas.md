@@ -18,6 +18,10 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 - Controle dos LEDs utilizando um **microcontrolador ESP32**.
 - Atualização do sistema de alimentação para **baixa tensão**, aumentando a segurança e evitando riscos de curtos-circuitos.
 - **Separacão dos circuitos** de controle (ESP32) e de iluminação (LEDs), garantindo maior proteção e robustez.
+  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.png" alt="Painel Modernizado" width="30%">
+</p>
 
 ---
 
