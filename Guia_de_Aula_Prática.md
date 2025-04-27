@@ -37,7 +37,7 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ## 🔧 Procedimento de Montagem
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="600">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="700">
 
 ### 1. Ligação dos Interruptores
 - Fixar o interruptor tipo pera em local acessível dentro de cada Box Didático
