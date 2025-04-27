@@ -48,9 +48,9 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ### O que é Retrofit?
 
-**Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
+**Retrofit** é o processo de **modernização e aprimoramento de sistemas, equipamentos ou estruturas já existentes**, visando **aumentar sua eficiência, funcionalidade e segurança**, ao mesmo tempo em que os adapta às **novas tecnologias**.  Em vez de substituir totalmente o que já foi construído, o retrofit promove uma **renovação inteligente**, aproveitando a infraestrutura física disponível e incorporando melhorias técnicas capazes de atender às exigências contemporâneas de desempenho e inovação.
 
-🔗 Para detalhes completos do procedimento de retrofit veja  [rtetrofit](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
+🔗 Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
 
 
 ## Guia de Aula Prática: Montagem do Quadro de Chamadas
