@@ -7,7 +7,7 @@
 Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais. Veja na imagem que segue um modelo comercial empregado em hospitais e clinicas.
 
 <p align="center">
-  <img src="./img/quadro_comercial.png" alt="Qaudro de chamadas comercial" width="40%">
+  <img src="./img/quadro_comercial.png" alt="Qaudro de chamadas comercial" width="25%">
 </p>
 
 Além disso, o sistema permite que os profissionais de saúde **registrem a sua presença no leito** do paciente que gerou a chamada, sinalizando ao restante da equipe que o **atendimento está em andamento**.
