@@ -6,7 +6,7 @@
 
 **Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="30%">
+  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="40%">
 </p>
 
 ---
@@ -22,13 +22,13 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 <table>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas2.jpeg" alt="Detalhe 1" width="50%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas2.jpeg" alt="Detalhe 1" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 2" width="50%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 2" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas4.jpeg" alt="Detalhe 3" width="50%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas4.jpeg" alt="Detalhe 3" width="70%">
     </td>
   </tr>
 </table>
