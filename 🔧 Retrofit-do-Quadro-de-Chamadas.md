@@ -68,7 +68,7 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
       <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas7.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas7.jpeg" alt="quadro_de_chamadas" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas9.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
   </tr>
 </table>
