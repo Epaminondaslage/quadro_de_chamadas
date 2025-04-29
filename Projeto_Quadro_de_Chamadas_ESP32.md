@@ -100,7 +100,10 @@ O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele 
 - Fica desativado por 60 segundos
 
 ---
+ ## 📂 Diagrama de conexoes do sitema
 
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="300">
+ 
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
 Todos os programas desenvolvidos encontram-se disponibilizados neste repositório, na pasta **Quadro_de_chamadas**, e podem ser livremente acessados e utilizados como referência para o desenvolvimento de outras aplicações.
