@@ -59,7 +59,7 @@ Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet
 
 Abra no navegador:
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/dht11.png" alt="dht11" width="200">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
 
 ```
 http://240.0.0.x
