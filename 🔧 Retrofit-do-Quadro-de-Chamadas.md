@@ -11,7 +11,7 @@ A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona ao
 
 ## 🔧 Aplicação no Quadro de Chamadas de Enfermagem
 
-# 🛠️ Etapas do Retrofit (Resumo)
+# 🛠️ Etapas do Retrofit
 
 1. **Avaliação**  
    Inspecionar o sistema existente e identificar falhas e necessidades de atualização.
