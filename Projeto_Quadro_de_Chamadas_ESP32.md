@@ -102,7 +102,7 @@ O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele 
 ---
  ## 📂 Diagrama de conexoes do sitema
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="300">
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="700">
  
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
