@@ -39,6 +39,9 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/box.png" alt="box" width="700">
 
+## 📊 Atividades Propostas
+- Realizar a montagem elétrica e mecânica dos equipamentos.
+- 
 ### 1. Ligação dos Interruptores
 - Fixar o interruptor tipo pera em local acessível dentro de cada Box Didático
 - Conectar uma extremidade do UTP e a outra a uma entrada no painel do ESP32 através do cabo UTP já instalado.
@@ -50,16 +53,12 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 ### 3. Instalação do Quadro de Chamadas
 - Montar todo o circuito na base (painel) conectando os condutores conforme esquema que segue.
 
-### 5. Testes Finais
+### 4. Testes Finais
 - Acionar cada interruptor e verificar se a respectiva arandela acende.
-- Monitorar o funcionamento do sistema pelo navefador de seu celular
+- Acessar o wifi do Laboratório e monitorar o funcionamento do sistema pelo navegador de seu celular.Testar os comandos da interface web para monitorar os estados.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
 
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="300">
-
-- Testar o acesso à interface web para monitorar os estados.
-
-## 📊 Atividades Propostas
-- Realizar a montagem elétrica e mecânica dos equipamentos.
 
 
