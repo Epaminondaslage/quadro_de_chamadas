@@ -24,13 +24,13 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 <table>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas2.jpeg" alt="Detalhe 1" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas.jpeg" alt="Detalhe 1" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 2" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas3.jpeg" alt="Detalhe 2" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas5.jpeg" alt="Detalhe 3" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas5.jpeg" alt="Detalhe 3" width="70%">
     </td>
   </tr>
 </table>
@@ -50,13 +50,13 @@ A modernização do sistema trouxe vários benefícios:
 <table>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas7.jpeg" alt="Detalhe 1" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas8.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 2" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas9.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas5.jpeg" alt="Detalhe 3" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas7.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
   </tr>
 </table>
