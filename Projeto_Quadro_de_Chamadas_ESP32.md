@@ -32,6 +32,7 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 
 O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão Wi-Fi integrada, múltiplos pinos de entrada e saída digitais, alto poder de processamento e ampla memória flash. Essas características permitem a criação de um sistema de monitoramento via navegador, com atualização em tempo real e possibilidade de armazenamento de páginas web (HTML, CSS, JS) diretamente na memória da placa, utilizando SPIFFS. Além disso, o ESP32 é compatível com a plataforma Arduino IDE, facilitando o aprendizado e a programação para alunos do curso técnico.
 
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp_wroom32.jpg" alt="esp pinos" width="150">
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
 
 Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
@@ -68,6 +69,13 @@ Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de In
 
 ---
 
+## 🔔 Modulo Relé 3.3V
+
+O módulo relé 2 canais 3.3V é um dispositivo que permite controlar dois circuitos de corrente alternada (AC) ou contínua (DC) por meio de sinais de baixa tensão, sendo compatível com microcontroladores como o ESP32, ESP8266 e Raspberry Pi. Cada canal possui um relé eletromecânico com contatos NO (normalmente aberto), NC (normalmente fechado) e COM (comum), suportando até 10A em 250V AC ou 30V DC. O módulo é acionado por nível lógico baixo (LOW), conta com optoacopladores para isolamento elétrico entre a carga e o circuito de controle, e possui LEDs indicadores para sinalizar o estado de cada relé.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/rele.jpg" alt="rele" width="150">
+
+---
 ## 🌡 Sensor DHT11
 
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/DHT11.png" alt="dht11" width="150">
@@ -84,7 +92,7 @@ O DHT11 é um sensor digital de baixo custo usado para medir temperatura e umida
 
 O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele é muito comum em projetos de automação, sistemas de alarme, interfaces de usuário e aplicações educacionais. Existem duas versões principais: o buzzer ativo e o buzzer passivo, cada um com características específicas.
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/buzzer.png" alt="dht11" width="150">
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/buzzer.png" alt="buzzer" width="150">
 
 - Ativado por qualquer uma das 4 entradas digitais
 - Desligado por:
