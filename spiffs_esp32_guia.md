@@ -1,4 +1,4 @@
-# Guia: Usando `SPIFFS.h` no ESP32 com Arduino
+# Guia: Usando `SPIFFS.h` no ESP32 
 
 ## 📦 O que é `SPIFFS.h`?
 

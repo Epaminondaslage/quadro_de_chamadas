@@ -1,14 +1,34 @@
-# Projeto: Quadro Sinalizador de Chamadas de Enfermagem
+# Quadro Sinalizador de Chamadas de Enfermagem
 
 ## 📢 O que é um sistema de chamada de enfermagem?
 
-Um **sistema de chamada de enfermagem**, também conhecido como **campainha hospitalar**, é um conjunto de dispositivos eletrônicos que permite que pacientes, acamados ou não, acionem um **sinal sonoro 🔊 e/ou luminoso 🔦** para chamar a atenção da equipe de saúde quando necessitam de assistência.
+É um sistema que permite aos pacientes sinalizar a necessidade de assistência por parte da equipe de enfermagem, geralmente em ambientes hospitalares ou casas de repouso. Ele utiliza sinais sonoros e luminosos para alertar os profissionais de saúde sobre a necessidade de atendimento. 
 
-Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais.
+Esse sinal é enviado para uma **central de monitoramento** 🛋️, localizada em local visível a todos os profissionais. Veja na imagem que segue um modelo comercial empregado em hospitais e clinicas.
+
+<p align="center">
+  <img src="./img/quadro_comercial.png" alt="Qaudro de chamadas comercial" width="25%">
+</p>
 
 Além disso, o sistema permite que os profissionais de saúde **registrem a sua presença no leito** do paciente que gerou a chamada, sinalizando ao restante da equipe que o **atendimento está em andamento**.
 
 ## 🔧 Como funciona um sistema de chamada de enfermagem?
+
+O paciente aciona a estação de chamada. 
+
+O sinaleiro de porta acende, sinalizando a chamada externamente. 
+A central do posto de enfermagem é acionada, indicando o número do leito ou do banheiro que solicitou ajuda. 
+O profissional de enfermagem aciona o botão de presença para indicar que está atendendo à chamada. 
+Após o atendimento, o profissional aciona novamente o botão de presença para desligar a chamada. 
+
+Benefícios:
+
+    Melhora a comunicação entre pacientes e equipe de enfermagem. 
+
+Agiliza o atendimento, reduzindo o tempo de espera dos pacientes. 
+Aumenta a segurança dos pacientes, permitindo que eles solicitem ajuda rapidamente em caso de necessidade. 
+Permite que a equipe de enfermagem monitore a atividade e a demanda de atendimento em tempo real. 
+
 
 Um **sistema de chamada de enfermagem** é composto por diferentes dispositivos, adaptados às necessidades do ambiente hospitalar:
 
@@ -26,85 +46,30 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ---
 
-## 🔬 Descrição Técnica do Projeto
+## Retrofit do Quadro de Chamadas de Enfermagem
 
-Este projeto implementa um painel de chamadas interativo utilizando o microcontrolador **ESP32 🔌**, com os seguintes recursos:
+### O que é Retrofit?
 
-🔹 4 entradas digitais (botões de chamada)
-🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
-🔹 Buzzer 🔊 com controle de desativação temporária (mute)
-🌡️ Sensor de temperatura e umidade **DHT11**
-🖥️ Interface web moderna, servida via **SPIFFS**
+**Retrofit** é o processo de **modernização e aprimoramento de sistemas, equipamentos ou estruturas já existentes**, visando **aumentar sua eficiência, funcionalidade e segurança**, ao mesmo tempo em que os adapta às **novas tecnologias**.  Em vez de substituir totalmente o que já foi construído, o retrofit promove uma **renovação inteligente**, aproveitando a infraestrutura física disponível e incorporando melhorias técnicas capazes de atender às exigências contemporâneas de desempenho e inovação.
 
----
+➡️ Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
 
-## 🌐 Funcionalidades
 
-🔢 Exibição da temperatura e umidade em tempo real (acessível por Wi-Fi 📡)
-🔹 Indicadores visuais de entrada (bolinhas cinza e verde 🔘)
-💔 Botão para desativar o buzzer por 1 minuto
-🌍 Logotipo do **CEFET-MG** exibido via SPIFFS
-🔄 Atualizações automáticas da página usando AJAX
-🖥️ Interface web responsiva hospedada no ESP32
+## Guia de Aula Prática: Montagem do Quadro de Chamadas
+
+Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**, esta aula prática propõe a montagem de um **Quadro de Chamadas de Enfermagem**, que será instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
+
+Durante a atividade, os alunos aplicarão conceitos de eletrônica, comandos elétricos e automação, utilizando botões tipo pera, arandelas de sinalização e um sistema de controle baseado em microcontrolador **ESP32** com interface web.
+
+➡️ Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
 
 ---
 
-## 📂 Estrutura de Software do ESP32 WROOM
+## Projeto de um Quadro de Chamadas de Enfermagem Didático
 
-```
-quadro_de_chamadas/
-├── quadro_de_chamadas.ino
-└── data/
-    ├── index.html
-    ├── style.css
-    ├── script.js
-    └── logo.png
-```
+O **Quadro de Chamadas** foi desenvolvido por professores do **CEFET-MG** com fins didáticos, com o objetivo de proporcionar aos alunos uma experiência prática em sistemas de automação e monitoramento. Utilizando o microcontrolador **ESP32**, o projeto simula um sistema real de chamadas de enfermagem, integrando entradas digitais (botões tipo pera) e saídas visuais (arandelas vermelhas) acionadas por relés. Além disso, inclui uma interface web para acompanhamento em tempo real das solicitações, reforçando conceitos de eletrônica, redes de comunicação e programação embarcada.
 
----
-
-## 🔧 Como Usar
-
-1. Abra `quadro_de_chamadas.ino` na IDE do Arduino.
-2. Instale as bibliotecas necessárias:
-   - `WiFi` 📡
-   - `WebServer` 🔹
-   - `DHT sensor library` 🌡️
-   - `Adafruit Unified Sensor`
-3. Envie os arquivos da pasta `data/` para o SPIFFS (plugin ESP32 Sketch Data Upload).
-4. Faça upload do código para o ESP32.
-5. Acesse o IP do ESP32 no navegador 🔍.
-
----
-
-## 📡 Exemplo de Resposta JSON
-
-```
-GET /status.json
-{
-  "temperatura": 24.5,
-  "umidade": 60.0,
-  "buzzer": false,
-  "entrada1": true,
-  "entrada2": false,
-  "entrada3": true,
-  "entrada4": false
-}
-```
-
----
-
-## 💾 O que é SPIFFS?
-
-**SPIFFS.h** é a biblioteca utilizada no ESP32 e ESP8266 para armazenar e gerenciar arquivos na memória flash da placa, como um mini "pendrive" interno 📥.
-
-> **SPIFFS** = *SPI Flash File System*
-
-É um sistema de arquivos leve e eficiente, ideal para microcontroladores.
-
-> 📘 **Referência:**  
-> Consulte o [Guia de uso do SPIFFS no ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/spiffs_esp32_guia.md) para mais detalhes sobre o sistema de arquivos SPIFFS.
-
+➡️ Para mais detalhes, consulte: [Projeto Quadro de Chamadas ESP32](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Projeto_Quadro_de_Chamadas_ESP32.md)
 
 ---
 
