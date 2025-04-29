@@ -47,5 +47,19 @@ A modernização do sistema trouxe vários benefícios:
 - **Introdução do monitoramento remoto via Wi-Fi**, com acesso através de uma interface web responsiva.
 - **Manutenção da função original** de chamada visual, de forma mais segura e moderna.
 - **Preparação para futuras expansões**, como registro de eventos, envio de notificacões automáticas e integração com sistemas de automação predial.
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas7.jpeg" alt="Detalhe 1" width="70%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas3.jpeg" alt="Detalhe 2" width="70%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro%20de%20chamadas5.jpeg" alt="Detalhe 3" width="70%">
+    </td>
+  </tr>
+</table>
+  
 
 ---
