@@ -49,8 +49,8 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se conectar à rede Wi-Fi do Laboratório de Instalações Prediais utilizando as seguintes credenciais:
 
 ```cpp
-#define SSID "DEE-Prediais"
-#define PASSWORD "prediais123"
+SSID "DEE-Prediais"
+PASSWORD "prediais123"
 ```
 Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet ou smartphone) e digitar o IP do ESP32 para acessar o painel de chamadas, visualizar o status das entradas e saídas e monitorar as informações de temperatura e umidade em tempo real.
 
