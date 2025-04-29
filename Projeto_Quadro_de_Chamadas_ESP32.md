@@ -102,6 +102,10 @@ O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele 
 ---
  ## 📂 Diagrama de conexoes do sitema
 
+O projeto consiste em um sistema embarcado de sinalização e monitoramento baseado no microcontrolador ESP32, voltado para aplicações didáticas e automação predial de pequeno porte. A arquitetura foi concebida para garantir confiabilidade, flexibilidade e baixo custo, utilizando recursos nativos do ESP32, como conectividade Wi-Fi e suporte a sistemas de arquivos SPIFFS, permitindo a disponibilização de uma interface web responsiva acessível via navegador. O sistema conta com 4 entradas digitais para acionamento por botões físicos e 4 saídas digitais destinadas ao controle de cargas ou sinalização visual por LEDs e relés, operando inclusive em tensões de 127V~. Inclui ainda um buzzer piezoelétrico com controle de silenciamento temporário e um sensor DHT11, responsável pela leitura de temperatura e umidade relativa.
+
+A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
+
 <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="700">
  
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
