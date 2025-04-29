@@ -9,18 +9,43 @@
 
 A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
 
----
-
 ## 🔧 Aplicação no Quadro de Chamadas de Enfermagem
+
+# 🛠️ Etapas do Retrofit
+
+1. **Avaliação**  
+   Inspecionar o sistema existente e identificar falhas e necessidades de atualização.
+
+2. **Definição de Objetivos**  
+   Estabelecer metas como modernização, aumento de eficiência ou adequação a normas.
+
+3. **Projeto e Planejamento**  
+   Elaborar o novo projeto técnico, selecionar materiais e definir cronograma e orçamento.
+
+4. **Preparação**  
+   Desligar e proteger sistemas existentes, remover componentes obsoletos.
+
+5. **Execução**  
+   Instalar novos equipamentos e integrar tecnologias modernas.
+
+6. **Testes e Comissionamento**  
+   Validar o funcionamento dos novos sistemas e fazer ajustes.
+
+7. **Documentação e Treinamento**  
+   Atualizar documentos e treinar os usuários.
+
+8. **Monitoramento Inicial**  
+   Acompanhar o desempenho e corrigir eventuais falhas.
+
 
 No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
 
-- Substituição dos **interruptores** por tipo  **Pera**.
-- Substituição das **arandelas** por **Sinalizadores de LEDs** de alta luminosidade**.
+- Substituição dos interruptores por tipo  Pera.
+- Substituição das arandelas por **Sinalizadores de LEDs** de alta luminosidade**.
 - Substituição da campahinha por um sinal audivel eletrônico que pode ser mutado.
 - Controle dos chamados utilizando um **microcontrolador ESP32**.
 - Atualização do sistema de alimentação para **baixa tensão**, aumentando a segurança e evitando riscos de curtos-circuitos.
-- **Separacão dos circuitos** de controle (ESP32) e de iluminação (LEDs), garantindo maior proteção e robustez.
+- Separacão dos circuitos de controle (ESP32) e de iluminação (LEDs), garantindo maior proteção e robustez.
 <table>
   <tr>
     <td align="center">
@@ -34,32 +59,46 @@ No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
     </td>
   </tr>
 </table>
-  
-
----
-
-## 💡 Resultados Obtidos
-
-A modernização do sistema trouxe vários benefícios:
-
-- **Redução significativa do consumo de energia**.
-- **Maior confiabilidade** operacional.
-- **Introdução do monitoramento remoto via Wi-Fi**, com acesso através de uma interface web responsiva.
-- **Manutenção da função original** de chamada visual, de forma mais segura e moderna.
-- **Preparação para futuras expansões**, como registro de eventos, envio de notificacões automáticas e integração com sistemas de automação predial.
-<table>
+  <table>
   <tr>
     <td align="center">
       <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas8.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas9.jpeg" alt="quadro_de_chamadas" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas7.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas7.jpeg" alt="quadro_de_chamadas" width="70%">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas9.jpeg" alt="quadro_de_chamadas" width="70%">
     </td>
   </tr>
 </table>
-  
+
+---
+
+## Benefícios da Modernização do Sistema
+
+A modernização implementada no sistema proporcionou uma série de melhorias relevantes, descritas a seguir:
+
+- **Redução significativa do consumo de energia**  
+  A atualização de componentes e a otimização dos circuitos resultaram em um sistema mais eficiente energeticamente, reduzindo o custo operacional e o impacto ambiental.
+
+- **Maior confiabilidade operacional**  
+  A substituição de dispositivos obsoletos por equipamentos mais robustos e modernos diminuiu a ocorrência de falhas, aumentando a disponibilidade do sistema e a segurança das operações.
+
+- **Introdução do monitoramento remoto via Wi-Fi**  
+  O sistema passou a oferecer acesso remoto em tempo real por meio de uma interface web responsiva, permitindo acompanhamento e gestão das chamadas de forma prática, tanto em dispositivos móveis quanto em computadores.
+
+- **Manutenção da função original de chamada visual**  
+  A funcionalidade principal de chamada visual foi preservada, agora utilizando tecnologias mais seguras e duráveis, como LEDs de alta eficiência, garantindo melhor visibilidade e maior vida útil dos componentes.
+
+- **Preparação para futuras expansões**  
+  O projeto foi estruturado para permitir novas funcionalidades, como:
+  - **Registro de eventos**: Armazenamento de dados de acionamentos para análise e auditoria.
+  - **Envio de notificações automáticas**: Alertas enviados por e-mail, SMS ou aplicativos em caso de eventos críticos.
+  - **Integração com sistemas de automação predial**: Comunicação com plataformas de automação para controle centralizado de múltiplos sistemas (iluminação, climatização, segurança, etc.).
+  - **Implementação de recursos IoT (Internet das Coisas)**:  
+    Inclusão de sensores e atuadores inteligentes, com possibilidade de expansão modular e monitoramento integrado à nuvem.
+  - **Gravação dos eventos em broker MQTT**:  
+    Cada chamada ou evento é registrado em tempo real via protocolo MQTT, permitindo armazenamento seguro, integração com dashboards de monitoramento e acionamento automático de rotinas inteligentes.
 
 ---
