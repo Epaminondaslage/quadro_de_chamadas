@@ -6,6 +6,42 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro de chamadas.jpeg" alt="Painel Modernizado" width="40%">
 </p>
+<style>
+  table {
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+  }
+  caption {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  td {
+    border: 2px solid #444;
+    padding: 10px;
+  }
+  img {
+    display: block;
+    margin: auto;
+  }
+</style>
+
+<table>
+  <caption>Galeria de Imagens</caption>
+  <tr>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig1.png?raw=true" alt="fig" width="150"><br>Imagem 1</td>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig2.png?raw=true" alt="fig" width="150"><br>Imagem 2</td>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig3.png?raw=true" alt="fig" width="150"><br>Imagem 3</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig4.png?raw=true" alt="fig" width="150"><br>Imagem 4</td>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig5.png?raw=true" alt="fig" width="150"><br>Imagem 5</td>
+    <td><img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/fig6.png?raw=true" alt="fig" width="150"><br>Imagem 6</td>
+  </tr>
+</table>
+
+
 
 A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
 
