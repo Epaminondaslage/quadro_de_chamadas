@@ -32,7 +32,6 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 
 O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão Wi-Fi integrada, múltiplos pinos de entrada e saída digitais, alto poder de processamento e ampla memória flash. Essas características permitem a criação de um sistema de monitoramento via navegador, com atualização em tempo real e possibilidade de armazenamento de páginas web (HTML, CSS, JS) diretamente na memória da placa, utilizando SPIFFS. Além disso, o ESP32 é compatível com a plataforma Arduino IDE, facilitando o aprendizado e a programação para alunos do curso técnico.
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32_wroom32.jpg" alt="esp pinos" width="150">
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
 
 Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
@@ -58,14 +57,14 @@ Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet
 ---
 ## 🌐 Acesso à interface
 
+Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
 Abra no navegador:
-
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
 
 ```
 http://240.0.0.x
 ```
-Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
 
 ---
 
@@ -78,9 +77,9 @@ O módulo relé 2 canais 3.3V é um dispositivo que permite controlar dois circu
 ---
 ## 🌡 Sensor DHT11
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/DHT11.png" alt="dht11" width="150">
-
 O DHT11 é um sensor digital de baixo custo usado para medir temperatura e umidade relativa do ar. Ele é amplamente utilizado em projetos educacionais, hobby e sistemas de automação residencial devido à sua simplicidade de uso e integração fácil com microcontroladores como Arduino, ESP32 e ESP8266.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/DHT11.png" alt="dht11" width="150">
 
 - Ligado ao GPIO 15
 - Mostra temperatura e umidade no display e na interface web
