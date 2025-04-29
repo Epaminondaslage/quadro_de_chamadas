@@ -1,0 +1,94 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header img {
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #222;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.status p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.entradas {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.entradas div {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  background: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.bolinha {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.verde {
+  background: green !important;
+  color: white;
+  font-weight: bold;
+}
+
+.red {
+  background: red;
+}
+
+.gray {
+  background: gray;
+}
+
+.green {
+  background: green;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
