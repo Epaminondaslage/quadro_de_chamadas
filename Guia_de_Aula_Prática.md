@@ -52,6 +52,11 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ### 5. Testes Finais
 - Acionar cada interruptor e verificar se a respectiva arandela acende.
+- Monitorar o funcionamento do sistema pelo navefador de seu celular
+
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="300">
+
 - Testar o acesso à interface web para monitorar os estados.
 
 ## 📊 Atividades Propostas
