@@ -5,7 +5,7 @@
 **Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
 No Laboratorio temos dous modelos de Quadro de chamadas de enfermeiros. 
 
-### 1- Quando Eletromecânico
+### 1- Quadro Eletromecânico
 
 Um quadro de chamadas de enfermagem eletromecânico é um sistema simples utilizado em hospitais para indicar que um paciente solicitou ajuda. Cada leito possui um botão que, ao ser pressionado, acende uma luz  e  acionar uma campainha no painel central. O painel, instalado na enfermaria, possui lâmpadas correspondentes a cada leito, e o alarme permanece ativo até ser desligado manualmente.
 
