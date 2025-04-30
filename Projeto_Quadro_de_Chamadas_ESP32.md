@@ -102,7 +102,21 @@ O Buzzer é um dispositivo eletrônico utilizado para gerar sinais sonoros. Ele 
 ---
  ## 📂 Diagrama de conexoes do sitema
 
-O projeto consiste em um sistema embarcado de sinalização e monitoramento baseado no microcontrolador ESP32, voltado para aplicações didáticas e automação predial de pequeno porte. A arquitetura foi concebida para garantir confiabilidade, flexibilidade e baixo custo, utilizando recursos nativos do ESP32, como conectividade Wi-Fi e suporte a sistemas de arquivos SPIFFS, permitindo a disponibilização de uma interface web responsiva acessível via navegador. O sistema conta com 4 entradas digitais para acionamento por botões físicos e 4 saídas digitais destinadas ao controle de cargas ou sinalização visual por LEDs e relés, operando inclusive em tensões de 127V~. Inclui ainda um buzzer piezoelétrico com controle de silenciamento temporário e um sensor DHT11, responsável pela leitura de temperatura e umidade relativa.
+O projeto consiste em um sistema embarcado de sinalização e monitoramento baseado no microcontrolador ESP32, voltado para aplicações didáticas e automação predial. A arquitetura foi concebida para garantir confiabilidade, flexibilidade e baixo custo, utilizando recursos nativos do ESP32, como conectividade Wi-Fi e suporte a sistemas de arquivos SPIFFS, permitindo a disponibilização de uma interface web responsiva acessível via navegador. O sistema conta com 4 entradas digitais para acionamento por botões físicos e 4 saídas digitais destinadas ao controle de cargas ou sinalização visual por LEDs e relés, operando inclusive em tensões de 127V~. Inclui ainda um buzzer piezoelétrico com controle de silenciamento temporário e um sensor DHT11, responsável pela leitura de temperatura e umidade relativa.
+
+| Dispositivo         | Pino ESP32 | Alimentação | Notas                                |
+|---------------------|------------|-------------|--------------------------------------|
+| Botão 1             | GPIO 32    | GND / 3.3V  | Pull-down, acionamento com HIGH      |
+| Botão 2             | GPIO 33    | GND / 3.3V  | Pull-down, acionamento com HIGH      |
+| Botão 3             | GPIO 25    | GND / 3.3V  | Pull-down, acionamento com HIGH      |
+| Botão 4             | GPIO 26    | GND / 3.3V  | Pull-down, acionamento com HIGH      |
+| Relé Arandela LED 1 | GPIO 14    | 12V         | Nível baixo aciona                   |
+| Relé Arandela LED 2 | GPIO 27    | 12V         | Nível baixo aciona                   |
+| Relé Arandela LED3  | GPIO 12    | 12V         | Nível baixo aciona                   |
+| Relé Arandela LED4  | GPIO 13    | 12V         | Nível baixo aciona                   |
+| Botão MUTE          | GPIO 15    | GND / 3.3V  | Pull-down, acionamento com HIGH      |
+| Buzzer (local)      | GPIO 23    | 3.3V        | Usado para alerta                    |
+| Sensor DHT11        | GPIO 21    | 3.3V        | Dados de temperatura e umidade       |
 
 A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
 
