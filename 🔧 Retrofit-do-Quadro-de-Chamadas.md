@@ -119,4 +119,15 @@ A modernização implementada no sistema proporcionou uma série de melhorias re
   - **Gravação dos eventos em broker MQTT**:  
     Cada chamada ou evento é registrado em tempo real via protocolo MQTT, permitindo armazenamento seguro, integração com dashboards de monitoramento e acionamento automático de rotinas inteligentes.
 
+## Descrição do Projeto de Retrofit
+
+Este projeto consiste na modernização (retrofit) de um quadro de chamadas de enfermagem eletrônico, substituindo circuitos eletronicos por um sistema  baseado no microcontrolador ESP32-WROOM, com foco em automação, conectividade e usabilidade.
+
+ Este projeto mantém os botões tipo pera nos leitos para acionamento, mas agora controla arandelas de led via relés, alimentados por fonte de 12V CC. Uma cigarra de aviso é ativada sempre que uma chamada é feita. O sistema é supervisionado por uma interface web responsiva, acessível por Wi-Fi, que exibe o status das chamadas em tempo real, além de dados de temperatura e umidade ambiente por meio de sensores digitais. Através dessa interface, também é possível silenciar temporariamente o buzzer de alerta.
+
+A estrutura modular e a programação flexível do ESP32 possibilitam fácil manutenção e futuras expansões, como notificações remotas, integração com sistemas de automação predial (BMS) e registro de eventos via MQTT. Essa abordagem preserva a infraestrutura existente, reduz custos e eleva o sistema a padrões modernos de eficiência e tecnologia
+
+O projeto completo, incluindo esquemas elétricos, código-fonte e instruções de montagem, está detalhado na documentação disponível no seguinte link:
+https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Projeto_Quadro_de_Chamadas_ESP32.md
+
 ---
