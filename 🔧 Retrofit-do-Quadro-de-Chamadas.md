@@ -17,7 +17,9 @@ Esse sistema utiliza componentes como relés, lâmpadas sinalizadoras e fiação
 
 ### 1- Quadro Eletrônico
 
+Um quadro de chamadas de enfermagem eletrônico é um sistema mais moderno que o eletromecânico utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
 
+O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha de alta intensidade), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão de reset localizado no leito.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas6.jpeg" alt="Painel atual" width="40%">
