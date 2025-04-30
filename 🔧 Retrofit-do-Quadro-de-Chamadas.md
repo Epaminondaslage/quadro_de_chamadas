@@ -1,4 +1,4 @@
-# 🔧 Retrofit do Quadro de Chamadas de Enfermagem
+# 🔧 Retrofit do Quadro de Chamadas de Enfermagem Eletrônico
 
 ## 🔬 O que é Retrofit?
 
