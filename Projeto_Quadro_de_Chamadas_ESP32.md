@@ -32,11 +32,11 @@ Este projeto implementa um painel de monitoramento com ESP32 utilizando:
 
 O ESP32 foi escolhido para o projeto do Quadro de Chamadas por oferecer conexão Wi-Fi integrada, múltiplos pinos de entrada e saída digitais, alto poder de processamento e ampla memória flash. Essas características permitem a criação de um sistema de monitoramento via navegador, com atualização em tempo real e possibilidade de armazenamento de páginas web (HTML, CSS, JS) diretamente na memória da placa, utilizando SPIFFS. Além disso, o ESP32 é compatível com a plataforma Arduino IDE, facilitando o aprendizado e a programação para alunos do curso técnico.
 
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="150">
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/esp32wroom32.png" alt="esp32" width="300">
 
 Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal para projetos educacionais que exigem confiabilidade e flexibilidade. A utilização do ESP32 possibilita ainda futuras expansões do sistema, como integração com controle remoto via MQTT, monitoramento por smartphones e atualizações OTA, preparando os alunos para tecnologias modernas de automação e conectividade.
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/pinout.png" alt="Pinout ESP32" width="300">
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/pinout.png" alt="Pinout ESP32" width="500">
 
 - 🔹 4 entradas digitais (botões de chamada)
 - 🔹 4 saídas digitais (LEDs e relés para cargas em 127V)
@@ -106,7 +106,7 @@ O projeto consiste em um sistema embarcado de sinalização e monitoramento base
 
 A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="700">
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="800">
  
  ## 📂 Códigos de programação e Estrutura de Software do ESP32 WROOM
 
