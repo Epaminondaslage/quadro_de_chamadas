@@ -90,7 +90,19 @@ No caso do **Quadro de Chamadas de Enfermagem Eletrônico**, o retrofit consisti
     </td>
   </tr>
 </table>
-
+  <table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas10.jpeg" alt="quadro_de_chamadas" width="70%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas11.jpeg" alt="quadro_de_chamadas" width="70%">
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas12.jpeg" alt="quadro_de_chamadas" width="70%">
+    </td>
+  </tr>
+</table>
 ---
 
 ## Benefícios da Modernização do Sistema
