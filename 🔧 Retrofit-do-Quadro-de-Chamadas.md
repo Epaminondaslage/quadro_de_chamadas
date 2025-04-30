@@ -3,6 +3,24 @@
 ## 🔬 O que é Retrofit?
 
 **Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
+
+No Laboratório de Instalações Prediais do CEFET-MG temos dois modelos de quadro de chamadas de enfermeiros. 
+
+### 1- Quadro Eletromecânico
+
+Um quadro de chamadas de enfermagem eletromecânico é um sistema simples utilizado em hospitais para indicar que um paciente solicitou ajuda. Cada leito possui um botão que, ao ser pressionado, acende uma luz  e  acionar uma campainha no painel central. O painel, instalado na enfermaria, possui lâmpadas correspondentes a cada leito, e o alarme permanece ativo até ser desligado manualmente.
+
+Esse sistema utiliza componentes como relés, lâmpadas sinalizadoras e fiação dedicada. Apesar de ser robusto, não permite registro digital, priorização de chamados ou visualização remota, tornando-se limitado.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_eletromecanico.jpg" alt="Painel Eletromecanico" width="40%">
+</p>
+
+### 1- Quadro Eletrônico
+
+Um quadro de chamadas de enfermagem eletrônico é um sistema mais moderno que o eletromecânico utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
+
+O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha de alta intensidade), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão de reset localizado no leito.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas6.jpeg" alt="Painel atual" width="40%">
 </p>
