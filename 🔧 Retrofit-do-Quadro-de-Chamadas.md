@@ -1,4 +1,4 @@
-# 🔧 Retrofit do Quadro de Chamadas de Enfermagem
+# 🔧 Retrofit do Quadro de Chamadas de Enfermagem Eletrônico
 
 ## 🔬 O que é Retrofit?
 
@@ -15,19 +15,19 @@ Esse sistema utiliza componentes como relés, lâmpadas sinalizadoras e fiação
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_eletromecanico.jpg" alt="Painel Eletromecanico" width="40%">
 </p>
 
-### 1- Quadro Eletrônico
+### 2- Quadro Eletrônico
 
-Um quadro de chamadas de enfermagem eletrônico é um sistema mais moderno que o eletromecânico utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
+Um quadro de chamadas de enfermagem eletrônico é um sistema, mais moderno que o eletromecânico, utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
 
-O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha de alta intensidade), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão de reset localizado no leito.
+O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão localizado no leito.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas6.jpeg" alt="Painel atual" width="40%">
 </p>
 
-A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
+A implementação do retrofit no Quadro de Chamadas de Enfermagem Eletrônico proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
 
-## 🔧 Aplicação no Quadro de Chamadas de Enfermagem
+## 🔧 Aplicação de Retrofit no Quadro de Chamadas de Enfermagem Eletrônico
 
 # 🛠️ Etapas do Retrofit
 
@@ -56,7 +56,7 @@ A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona ao
    Acompanhar o desempenho e corrigir eventuais falhas.
 
 
-No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
+No caso do **Quadro de Chamadas de Enfermagem Eletrônico**, o retrofit consistiu em:
 
 - Substituição dos interruptores por tipo  Pera.
 - Substituição das arandelas por **Sinalizadores de LEDs** de alta luminosidade**.
@@ -118,5 +118,16 @@ A modernização implementada no sistema proporcionou uma série de melhorias re
     Inclusão de sensores e atuadores inteligentes, com possibilidade de expansão modular e monitoramento integrado à nuvem.
   - **Gravação dos eventos em broker MQTT**:  
     Cada chamada ou evento é registrado em tempo real via protocolo MQTT, permitindo armazenamento seguro, integração com dashboards de monitoramento e acionamento automático de rotinas inteligentes.
+
+## Descrição do Projeto de Retrofit
+
+Este projeto consiste na modernização (retrofit) de um quadro de chamadas de enfermagem eletrônico, substituindo circuitos eletronicos por um sistema  baseado no microcontrolador ESP32-WROOM, com foco em automação, conectividade e usabilidade.
+
+ Este projeto mantém os botões tipo pera nos leitos para acionamento, mas agora controla arandelas de led via relés, alimentados por fonte de 12V CC. Uma cigarra de aviso é ativada sempre que uma chamada é feita. O sistema é supervisionado por uma interface web responsiva, acessível por Wi-Fi, que exibe o status das chamadas em tempo real, além de dados de temperatura e umidade ambiente por meio de sensores digitais. Através dessa interface, também é possível silenciar temporariamente o buzzer de alerta.
+
+A estrutura modular e a programação flexível do ESP32 possibilitam fácil manutenção e futuras expansões, como notificações remotas, integração com sistemas de automação predial (BMS) e registro de eventos via MQTT. Essa abordagem preserva a infraestrutura existente, reduz custos e eleva o sistema a padrões modernos de eficiência e tecnologia
+
+O projeto completo, incluindo esquemas elétricos, código-fonte e instruções de montagem, está detalhado na documentação disponível no seguinte link:
+https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Projeto_Quadro_de_Chamadas_ESP32.md
 
 ---
