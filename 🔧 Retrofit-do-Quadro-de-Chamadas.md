@@ -15,19 +15,19 @@ Esse sistema utiliza componentes como relés, lâmpadas sinalizadoras e fiação
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_eletromecanico.jpg" alt="Painel Eletromecanico" width="40%">
 </p>
 
-### 1- Quadro Eletrônico
+### 2- Quadro Eletrônico
 
-Um quadro de chamadas de enfermagem eletrônico é um sistema mais moderno que o eletromecânico utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
+Um quadro de chamadas de enfermagem eletrônico é um sistema, mais moderno que o eletromecânico, utilizado para indicar que um paciente solicitou atendimento. Cada leito possui um botão de chamada que, ao ser pressionado, envia um sinal elétrico de 12V em corrente contínua (CC), alimentando um LED indicador correspondente no painel central.
 
-O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha de alta intensidade), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão de reset localizado no leito.
+O painel, normalmente instalado na enfermaria, contém LEDs sinalizadores para cada leito e uma cigarra sonora (campainha), que é acionada por meio de um relé. O sistema permanece ativo — com o LED aceso e a cigarra tocando — até que o chamado seja cancelado manualmente, geralmente por um botão localizado no leito.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas6.jpeg" alt="Painel atual" width="40%">
 </p>
 
-A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
+A implementação do retrofit no Quadro de Chamadas de Enfermagem Eletrônico proporciona aos alunos do curso de Eletrotécnica uma experiência prática com tecnologias atuais, promovendo o desenvolvimento de competências em instalações elétricas, automação e Internet das Coisas (IoT).
 
-## 🔧 Aplicação no Quadro de Chamadas de Enfermagem
+## 🔧 Aplicação de Retrofit no Quadro de Chamadas de Enfermagem Eletrônico
 
 # 🛠️ Etapas do Retrofit
 
@@ -56,7 +56,7 @@ A implementação do retrofit no Quadro de Chamadas de Enfermagem proporciona ao
    Acompanhar o desempenho e corrigir eventuais falhas.
 
 
-No caso do **Quadro de Chamadas de Enfermagem**, o retrofit consistiu em:
+No caso do **Quadro de Chamadas de Enfermagem Eletrônico**, o retrofit consistiu em:
 
 - Substituição dos interruptores por tipo  Pera.
 - Substituição das arandelas por **Sinalizadores de LEDs** de alta luminosidade**.
