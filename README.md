@@ -21,6 +21,10 @@ A central do posto de enfermagem é acionada, indicando o número do leito ou do
 O profissional de enfermagem aciona o botão de presença para indicar que está atendendo à chamada. 
 Após o atendimento, o profissional aciona novamente o botão de presença para desligar a chamada. 
 
+<p align="center">
+  <img src="./img/funcionamento.jpg" alt="Qoperacao" width="25%">
+</p>
+
 Benefícios:
 
     Melhora a comunicação entre pacientes e equipe de enfermagem. 
