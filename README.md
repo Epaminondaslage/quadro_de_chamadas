@@ -22,7 +22,7 @@ O profissional de enfermagem aciona o botão de presença para indicar que está
 Após o atendimento, o profissional aciona novamente o botão de presença para desligar a chamada. 
 
 <p align="center">
-  <img src="./img/funcionamento.jpg" alt="Qoperacao" width="25%">
+  <img src="./img/funcionamento.jpg" alt="Qoperacao" width="80%">
 </p>
 
 Benefícios:
