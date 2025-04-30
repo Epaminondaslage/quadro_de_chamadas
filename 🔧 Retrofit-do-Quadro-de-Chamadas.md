@@ -3,7 +3,8 @@
 ## 🔬 O que é Retrofit?
 
 **Retrofit** é o processo de **modernização ou atualização de sistemas, equipamentos ou estruturas existentes**, com o objetivo de aumentar sua eficiência, funcionalidade, segurança e adaptá-los a novas tecnologias, sem a necessidade de substituição completa. É uma **renovação inteligente**: aproveita-se a infraestrutura física existente, mas introduzem-se melhorias técnicas para atender às demandas atuais.
-No Laboratorio temos dous modelos de Quadro de chamadas de enfermeiros. 
+
+No Laboratório de Instalações Prediais do CEFET-MG temos dois modelos de quadro de chamadas de enfermeiros. 
 
 ### 1- Quadro Eletromecânico
 
