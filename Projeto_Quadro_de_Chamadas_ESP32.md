@@ -52,6 +52,8 @@ Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se c
 SSID "DEE-Prediais"
 PASSWORD "prediais123"
 ```
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/wifi.jpg" alt="esp32" width="300">
+
 Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet ou smartphone) e digitar o IP do ESP32 para acessar o painel de chamadas, visualizar o status das entradas e saídas e monitorar as informações de temperatura e umidade em tempo real.
 
 ---
@@ -61,7 +63,7 @@ Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de In
 Abra no navegador:
 
 ```
-http://240.0.0.x
+http://10.240.240.x
 ```
 
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
