@@ -125,10 +125,7 @@ const int botaoMute = 27;
 | 11             | D21            | GPIO21    | **Buzzer**        |
 
 
-<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/pinagem.png" alt="buzzer" width="300">
-
-
-A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
+<img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/pinagem.jpg" alt="Pinagemr" width="300">
 
 ---
 
@@ -260,6 +257,8 @@ Arquivos SPIFFS disponíveis:
 ```
 ---
 ## 📡 Conexão Wi-Fi
+
+A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
 
 Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se conectar à rede Wi-Fi do Laboratório de Instalações Prediais utilizando as seguintes credenciais:
 
