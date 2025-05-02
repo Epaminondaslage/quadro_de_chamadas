@@ -50,15 +50,6 @@ Dispositivo centralizado que **monitora e sinaliza** todas as chamadas ativas.
 
 ---
 
-## Retrofit do Quadro de Chamadas de Enfermagem
-
-### O que é Retrofit?
-
-**Retrofit** é o processo de **modernização e aprimoramento de sistemas, equipamentos ou estruturas já existentes**, visando **aumentar sua eficiência, funcionalidade e segurança**, ao mesmo tempo em que os adapta às **novas tecnologias**.  Em vez de substituir totalmente o que já foi construído, o retrofit promove uma **renovação inteligente**, aproveitando a infraestrutura física disponível e incorporando melhorias técnicas capazes de atender às exigências contemporâneas de desempenho e inovação.
-
-➡️ Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
-
-
 ## Guia de Aula Prática: Montagem do Quadro de Chamadas
 
 Com o objetivo de **capacitar os alunos do 2º ano do Curso de Eletrotécnica**, esta aula prática propõe a montagem de um **Quadro de Chamadas de Enfermagem**, que será instalado na parede externa do **Box 4** do Laboratório de Instalações Prediais.
@@ -68,7 +59,15 @@ Durante a atividade, os alunos aplicarão conceitos de eletrônica, comandos el�
 ➡️ Para detalhes completos do procedimento e materiais necessários, acesse o [Guia de Aula Prática de Montagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/Guia_de_Aula_Pr%C3%A1tica.md).
 
 ---
+## Retrofit do Quadro de Chamadas de Enfermagem
 
+### O que é Retrofit?
+
+**Retrofit** é o processo de **modernização e aprimoramento de sistemas, equipamentos ou estruturas já existentes**, visando **aumentar sua eficiência, funcionalidade e segurança**, ao mesmo tempo em que os adapta às **novas tecnologias**.  Em vez de substituir totalmente o que já foi construído, o retrofit promove uma **renovação inteligente**, aproveitando a infraestrutura física disponível e incorporando melhorias técnicas capazes de atender às exigências contemporâneas de desempenho e inovação.
+
+➡️ Para detalhes completos do procedimento de retrofit veja : [Retrofit do Quadro de Chamadas de Enfermagem](https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/%F0%9F%94%A7%20Retrofit-do-Quadro-de-Chamadas.md).
+
+---
 ## Projeto de um Quadro de Chamadas de Enfermagem Didático
 
 O **Quadro de Chamadas** foi desenvolvido por professores do **CEFET-MG** com fins didáticos, com o objetivo de proporcionar aos alunos uma experiência prática em sistemas de automação e monitoramento. Utilizando o microcontrolador **ESP32**, o projeto simula um sistema real de chamadas de enfermagem, integrando entradas digitais (botões tipo pera) e saídas visuais (arandelas vermelhas) acionadas por relés. Além disso, inclui uma interface web para acompanhamento em tempo real das solicitações, reforçando conceitos de eletrônica, redes de comunicação e programação embarcada.
