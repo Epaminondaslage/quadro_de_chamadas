@@ -30,7 +30,7 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 ## 📊 Esquema de Conexão
 
 - **Interruptores tipo pera** conectados às **entradas digitais** do Quadro onde está o ESP32.
-- **Arandelas** conectadas a sídas dos **relés**, acionados pelas **saídas digitais** do ESP32.
+- **Arandelas** conectadas a saídas dos **relés**, acionados pelas **saídas digitais** do ESP32.
 - **Quadro de Chamadas de Enfermagem** alimentado em rede de 127V
 
 <img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/ligacao.png" alt="box" width="600">  
@@ -41,7 +41,7 @@ O quadro central controlará as chamadas via **ESP32**, com registro e monitoram
 
 ## 📊 Atividades Propostas
 - Realizar a montagem elétrica e mecânica dos equipamentos.
-- 
+  
 ### 1. Ligação dos Interruptores
 - Fixar o interruptor tipo pera em local acessível dentro de cada Box Didático
 - Conectar uma extremidade do UTP e a outra a uma entrada no painel do ESP32 através do cabo UTP já instalado.
