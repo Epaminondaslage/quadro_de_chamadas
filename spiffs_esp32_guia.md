@@ -143,7 +143,7 @@ esptool.py --chip esp32 --port COM5 --baud 460800 write_flash 0x290000 spiffs.bi
 
 ---
 
-## ℹ️ Endereço da partição SPIFFS
+## ✅ Endereço da partição SPIFFS
 
 | Esquema de Particionamento            | Endereço |
 |----------------------------------------|----------|
@@ -169,13 +169,13 @@ void setup() {
 
 ---
 
-## 🧪 Etapa 8: Testar no navegador
+## ✅ Etapa 8: Testar no navegador
 
 Acesse o IP do ESP32 no navegador para testar.
 
 ---
 
-## 🎉 Ambiente pronto!
+## ✅ Ambiente pronto!
 
 Sistema configurado para enviar SPIFFS ao ESP32 usando Python 3, mkspiffs e MSYS2 na Arduino IDE 2.x.
 
