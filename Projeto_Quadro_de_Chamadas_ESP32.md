@@ -122,6 +122,18 @@ O projeto consiste em um sistema embarcado de sinalização e monitoramento base
 | Buzzer (local)      | GPIO 23    | 3.3V        | Usado para alerta                    |
 | Sensor DHT11        | GPIO 21    | 3.3V        | Dados de temperatura e umidade       |
 
+#define DHTPIN 15
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+WebServer server(80);
+
+const int entradas[4] = {32, 33, 25, 26};
+const int saidas[4] = {4, 5, 18, 19};
+const int buzzerPin = 21;
+const int botaoMute = 27;
+
+
 A integração com redes sem fio permite a expansão natural do sistema para aplicações de Internet das Coisas (IoT), com publicação de eventos em tempo real por meio do protocolo MQTT, possibilitando o envio de dados para servidores locais ou em nuvem. Essa funcionalidade viabiliza o monitoramento remoto por dashboards web ou aplicações móveis, além de facilitar a integração com sistemas supervisórios ou plataformas de automação predial. A estrutura modular e o uso de tecnologias abertas tornam o projeto ideal para o ensino técnico de sistemas embarcados, protocolo de comunicação, lógica de controle e aplicações conectadas.
 
 <img src="https://raw.githubusercontent.com/Epaminondaslage/quadro_de_chamadas/main/img/quadro_de_chamadas_fritzing.jpg" alt="buzzer" width="800">
