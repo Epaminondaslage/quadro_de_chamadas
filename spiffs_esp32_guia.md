@@ -45,7 +45,7 @@ Guia para instalar **Python 3**, `esptool.py`, `mkspiffs` e configurar o **MSYS2
 
 ## ✅ Etapa 1: Instalar Python 3 e pip
 
-### 🔽 1. Baixar Python 3
+### ✅ 1. Baixar Python 3
 
 [Baixe aqui](https://www.python.org/downloads/)
 
@@ -69,7 +69,7 @@ esptool.py --help
 
 ## ✅ Etapa 2: Instalar o MSYS2
 
-### 🔽 1. Baixar MSYS2
+### ✅ 1. Baixar MSYS2
 
 [Baixar aqui](https://www.msys2.org)
 
