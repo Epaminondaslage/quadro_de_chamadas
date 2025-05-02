@@ -183,14 +183,14 @@ Sistema configurado para enviar SPIFFS ao ESP32 usando Python 3, mkspiffs e MSYS
 
 # 💾 Arquivo BAT para Compilar e Enviar para o ESP32
 
-## 🌟 Objetivo do arquivo `.bat`
+## ✅ Objetivo do arquivo `.bat`
 
 Automatizar:
 
 1. Geração da imagem SPIFFS (`spiffs.bin`)
 2. Upload da imagem SPIFFS para o ESP32
 
-## 📂 Comandos usados:
+## ✅ Comandos usados:
 
 ### 1. Geração do spiffs.bin
 
@@ -218,7 +218,7 @@ Parâmetros:
 
 ---
 
-## 📚 Resumo Simplificado
+## ✅ Resumo Simplificado
 
 | Etapa | Ação |
 |:-----|:-----|
@@ -229,7 +229,7 @@ Ao executar o `.bat`, todo o processo é automático!
 
 ---
 
-## 📦 Arquivos e Ferramentas
+## ✅ Arquivos e Ferramentas
 
 | Arquivo/Ferramenta | Função |
 |--------------------|---------|
