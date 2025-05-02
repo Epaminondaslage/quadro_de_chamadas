@@ -1,19 +1,19 @@
 # Guia: Usando `SPIFFS.h` no ESP32 
 
-## 📦 O que é `SPIFFS.h`?
+# 📦 O que é `SPIFFS.h`?
 
 A biblioteca `SPIFFS.h` permite utilizar a memória **flash interna do ESP32** como um **sistema de arquivos**, possibilitando **armazenar e servir arquivos como HTML, CSS, JavaScript e imagens diretamente da placa**.
 
 ---
 
-## 🧐 Significado
+### ✅ Significado
 
 **SPIFFS** = *SPI Flash File System*  
 Sistema de arquivos leve, ideal para microcontroladores com memória flash limitada.
 
 ---
 
-## 🛠️ Para que serve?
+## ✅ Para que serve?
 
 Com `SPIFFS`, é possível:
 
@@ -24,7 +24,7 @@ Com `SPIFFS`, é possível:
 
 ---
 
-## ⚙️ Exemplo de uso no código
+## ✅ Exemplo de uso no código
 
 ```cpp
 #include "SPIFFS.h"
@@ -225,7 +225,7 @@ Parâmetros:
 | 1️⃣ | Gerar imagem SPIFFS |
 | 2️⃣ | Gravar SPIFFS no ESP32 |
 
-Ao executar o `.bat`, todo o processo é automático! ✅
+Ao executar o `.bat`, todo o processo é automático! 
 
 ---
 
