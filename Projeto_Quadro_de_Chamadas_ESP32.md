@@ -44,34 +44,6 @@ Sua estrutura robusta, baixo custo e grande suporte da comunidade o tornam ideal
 - 🌡️ Sensor de temperatura e umidade **DHT11**
 - 🖥️ Interface web moderna, servida via **SPIFFS**
 
-## 📡 Conexão Wi-Fi
-
-Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se conectar à rede Wi-Fi do Laboratório de Instalações Prediais utilizando as seguintes credenciais:
-
-```cpp
-SSID "DEE-Prediais"
-PASSWORD "prediais123"
-```
-Cada celular ou tablet irá obter um endereço IP dinâmico conforme este exemplo abaixo.
-
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/wifi.jpg" alt="esp32" width="150">
-
-Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet ou smartphone) e digitar o IP do ESP32 para acessar o painel de chamadas, visualizar o status das entradas e saídas e monitorar as informações de temperatura e umidade em tempo real.
-
----
-## 🌐 Acesso à interface
-
-Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
-Abra no navegador:
-
-```
-http://10.240.240.x
-```
-
-<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
-
----
-
 ## 🔔 Modulo Relé 3.3V
 
 O módulo relé 2 canais 3.3V é um dispositivo que permite controlar dois circuitos de corrente alternada (AC) ou contínua (DC) por meio de sinais de baixa tensão, sendo compatível com microcontroladores como o ESP32, ESP8266 e Raspberry Pi. Cada canal possui um relé eletromecânico com contatos NO (normalmente aberto), NC (normalmente fechado) e COM (comum), suportando até 10A em 250V AC ou 30V DC. O módulo é acionado por nível lógico baixo (LOW), conta com optoacopladores para isolamento elétrico entre a carga e o circuito de controle, e possui LEDs indicadores para sinalizar o estado de cada relé.
@@ -282,6 +254,33 @@ Arquivos SPIFFS disponíveis:
   /script.js
   /logo.png
 ```
+---
+## 📡 Conexão Wi-Fi
+
+Para acessar a interface web do Quadro de Chamadas, é necessário primeiro se conectar à rede Wi-Fi do Laboratório de Instalações Prediais utilizando as seguintes credenciais:
+
+```cpp
+SSID "DEE-Prediais"
+PASSWORD "prediais123"
+```
+Cada celular ou tablet irá obter um endereço IP dinâmico conforme este exemplo abaixo.
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/wifi.jpg" alt="esp32" width="150">
+
+Após a conexão, basta abrir o navegador em seu dispositivo (computador, tablet ou smartphone) e digitar o IP do ESP32 para acessar o painel de chamadas, visualizar o status das entradas e saídas e monitorar as informações de temperatura e umidade em tempo real.
+
+---
+## 🌐 Acesso à interface
+
+Devera procurar o IP do ESP alocado pelo DHCP do roretador do laboratório de Instalações Prediais. A interface carregará os dados em tempo real.
+Abra no navegador:
+
+```
+http://10.240.240.x
+```
+
+<img src="https://github.com/Epaminondaslage/quadro_de_chamadas/blob/main/img/tela_www.jpg" alt="box" width="400">
+
 ---
 
 ## 💾 O que é SPIFFS?
