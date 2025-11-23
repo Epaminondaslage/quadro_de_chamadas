@@ -1,6 +1,15 @@
-# Quadro Sinalizador de Chamadas de Enfermagem
+<td style="width: 10%;">
+    <img src="https://raw.githubusercontent.com/Epaminondaslage/Lab-IoT-ELE-CEFET/master/img/Logo_CEFET-MG.png" width="20%" />
+</td>
 
-## 📢 O que é um sistema de chamada de enfermagem?
+## **CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA DE MINAS GERAIS**  
+## **Departamento de Engenharia Elétrica - CEFET-MG**  
+## **Coordenação do Curso de Eletrotécnica**  
+
+## Disciplina: **PLIP - Prática de Laboratório de Instalações Prediais**
+## Guia de Aula – Quadro Sinalizador de Chamadas de Enfermagem
+
+##  O que é um sistema de chamada de enfermagem?
 
 É um sistema que permite aos pacientes sinalizar a necessidade de assistência por parte da equipe de enfermagem, geralmente em ambientes hospitalares ou casas de repouso. Ele utiliza sinais sonoros e luminosos para alertar os profissionais de saúde sobre a necessidade de atendimento. 
 
