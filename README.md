@@ -6,7 +6,7 @@
 ## **Departamento de Engenharia Elétrica - CEFET-MG**  
 ## **Coordenação do Curso de Eletrotécnica**  
 
-## Disciplina: **PLIP - Prática de Laboratório de Instalações Prediais**
+###  Disciplina: **PLIEP - Prática de Laboratório de Instalações Eletricas Prediais**
 ## Guia de Aula – Quadro Sinalizador de Chamadas de Enfermagem
 
 ##  O que é um sistema de chamada de enfermagem?
